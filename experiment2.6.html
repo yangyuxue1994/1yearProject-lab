@@ -378,9 +378,9 @@ console.log('succ update SUBJ_RAND_ORDER', SUBJ_RAND_ORDER!=null)
     type: 'html-button-response',
     stimulus: "<h1> Instructions </h1>"
     +"<div class='leftp'><p>In this study, you are going to help your firend Tim learn English." 
-    +"Each screen will show a picture paired with a verb. Tim is trying to create a sentence to describe the picture, "
-    +"Tim is not a native English speaker, so you need to do two things to help him learn: </p>"
-    +"<p>First, you should verify if the sentence Tim made is describing the picture. Press Y for YES, otherwise press N for No. </p>"
+    +"Each screen will show a picture paired with a verb. Tim is trying to create a sentence to describe the picture."
+    +"Even though Tim is not a native English speaker, he learned so hard. As his friend, you would like to help him: </p>"
+    +"<p>First, you should verify if the sentence Tim made is describing the picture. Press Y for YES, N for No. </p>"
     +"<p> NOTICE: you should only pay attention to the <bold>meaning</bold> of the sentence regardless of the grammar and structure.</p>"
     +"<p>Second, on the next screen, you will see a new picture with a word. You need to construct a complete sentence to describe the picture using the word Tim gave you. </p>"
     +"<p> If you have any questoins, please ask now.</p></div>",
@@ -404,24 +404,22 @@ console.log('succ update SUBJ_RAND_ORDER', SUBJ_RAND_ORDER!=null)
         type: 'html-keyboard-response',
         stimulus: '<h1 class="">+</h1>',
         choices: jsPsych.NO_KEYS,
-        trial_duration: 0,
-        post_trial_gap: 500
+        trial_duration: 1500
       },
       /*picture verification task*/
       {
         type: 'categorize-image',
         stimulus: function(){ return 'img/'+jsPsych.timelineVariable('prime_image_ID', true); },
-        stimulus_duration:3500,
+        stimulus_duration: 3500,
         choices: [78, 89], // n=78; y=89 // 1=49; 0=48
         key_answer: function() {return jsPsych.pluginAPI.convertKeyCharacterToKeyCode(jsPsych.timelineVariable('verif_ans', true))},
         correct_text: "<div><h1> Correct! </h1></div>",
-        incorrect_text: "<div><h1> Wrong! </h1> <p> Remeber, pay attenton to the meaning of sentence and picture, rather than grammar or structure. </p></div>",
+        incorrect_text: "<div><h1> Wrong! </h1> <p> Remeber, pay attenton to the meaning of the sentence and picture, rather than the grammar or structure. </p></div>",
         prompt: "<div class='prompt'>"
-        +"<p> Does the sentence correctly describe the picture? "
+        +"<p> Does the sentence describe the picture? "
         +"</br> Press Y (Yes) or N (No) </div>",
         show_stim_with_feedback: true, // not show sti with feedback
-        force_correct_button_press: false,
-        post_trial_gap: 500,
+        show_stim_with_feedback: false,
         data: function(){
           return {verif_asn: jsPsych.timelineVariable('verif_ans')}
         },
@@ -453,7 +451,7 @@ console.log('succ update SUBJ_RAND_ORDER', SUBJ_RAND_ORDER!=null)
         stimulus: function(){ return 'img/'+jsPsych.timelineVariable('targ_image_ID', true); },
         questions: [
           {prompt: "<div class='prompt'>"
-          +"Please help me construct a complete sentence to describe the picture (use the verb given):</div>",
+          +"Please make a complete sentence to describe the picture (use the verb given):</div>",
           value: '',
           row: 5,
           column: 50}
@@ -482,8 +480,7 @@ console.log('succ update SUBJ_RAND_ORDER', SUBJ_RAND_ORDER!=null)
         type: 'html-keyboard-response',
         stimulus: '<h1 class="">+</h1>',
         choices: jsPsych.NO_KEYS,
-        trial_duration: 0,
-        post_trial_gap: 500
+        trial_duration: 1500
       },
       /*picture verification task*/
       {
@@ -495,7 +492,7 @@ console.log('succ update SUBJ_RAND_ORDER', SUBJ_RAND_ORDER!=null)
         correct_text: "",
         incorrect_text: "",
         prompt: "<div class='prompt'>"
-        +"<p> Does the sentence correctly describe the picture? "
+        +"<p> Does the sentence describe the picture? "
         +"</br> Press Y (Yes) or N (No) </div>",
         show_stim_with_feedback: false,
         force_correct_button_press: false,
@@ -531,7 +528,7 @@ console.log('succ update SUBJ_RAND_ORDER', SUBJ_RAND_ORDER!=null)
         stimulus: function(){ return 'img/'+jsPsych.timelineVariable('targ_image_ID', true); },
         questions: [
           {prompt: "<div class='prompt'>"
-          +"Please help me construct a complete sentence to describe the picture (use the verb given):</div>",
+          +"Please make a complete sentence to describe the picture (use the verb given):</div>",
           value: '',
           row: 5,
           column: 50}
@@ -551,7 +548,7 @@ console.log('succ update SUBJ_RAND_ORDER', SUBJ_RAND_ORDER!=null)
   var end_experiment = {
     type: 'html-keyboard-response',
     stimulus: "<h1> All Done! </h1><div class='leftp'><p>Thank you for participating!</p></div>",
-    choices: jsPsych.NO_KEYS,
+    choices: ['q'],
     post_trial_gap: 1000
   };
 
@@ -563,7 +560,7 @@ console.log('succ update SUBJ_RAND_ORDER', SUBJ_RAND_ORDER!=null)
     on_finish: function() {
       // var final_data_file = SUBJDATA+SUBJECTID+'.csv';
       jsPsych.data.get().localSave('csv','ASP_v1_'+SUBJECTID+'.csv');
-      // jsPsych.data.displayData();
+      jsPsych.data.displayData();
     },
     default_iti: 250
   });
