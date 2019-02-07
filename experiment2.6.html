@@ -361,8 +361,9 @@ console.log('succ update SUBJ_RAND_ORDER', SUBJ_RAND_ORDER!=null)
         var data=JSON.parse(jsPsych.data.get().last(1).select("responses").values);
         SUBJECTID = data["Q0"]
         console.log("SUBJECTID", SUBJECTID)
-        jsPsych.data.addProperties(SUBJ_RAND_ORDER);  // access global RAND_ORDER and save to local
-        var path = SUBJECTID+"_randOrder.csv";
+        jsPsych.data.addProperties(SUBJ_RAND_ORDER);  // access global RAND_ORDER and save to local  "./img/talking1.jpg")
+        var path = "./"+SUBJECTID+"_randOrder.csv";
+        console.log("path", path)
         jsPsych.data.get().localSave('csv', SUBJECTID+"_randOrder.csv");
       }
     };
@@ -558,8 +559,8 @@ console.log('succ update SUBJ_RAND_ORDER', SUBJ_RAND_ORDER!=null)
     timeline: timeline,
     // preload_images: images
     on_finish: function() {
-      // var final_data_file = SUBJDATA+SUBJECTID+'.csv';
-      jsPsych.data.get().localSave('csv','ASP_v1_'+SUBJECTID+'.csv');
+      // var final_data_file = SUBJDATA+SUBJECTID+'.csv';  "./img/talking1.jpg")
+      jsPsych.data.get().localSave('csv','./ASP_v1_'+SUBJECTID+'.csv');
       jsPsych.data.displayData();
     },
     default_iti: 250
