@@ -13,6 +13,7 @@
   <!-- csv -->
    <script src="jspsych-6.0.5/jquery-3.3.1.min.js"></script>
    <script src="jspsych-6.0.5/d3.v3.min.js"></script>
+   <script src="https://unpkg.com/mathjs/dist/math.min.js"></script>
    <!-- <script src="jspsych-6.0.5/jquery-csv.js"></script> -->
 
 
@@ -44,7 +45,7 @@
   { prime_image_ID: "F003.jpg"  ,prime_verb:  "bow" ,verif_ans:'y',sentence:  "The gentleman is bow to the crowd.", targ_image_ID: "F009.jpg"  ,targ_verb:  "parachute"  },
   { prime_image_ID: "F004.jpg"  ,prime_verb:  "swat"  ,verif_ans:'n' ,sentence:  "The family is laughing together. ",targ_image_ID: "F010.jpg"  ,targ_verb:  "hatch"  },
   { prime_image_ID: "F005.jpg"  ,prime_verb:  "mop" ,verif_ans:'n',sentence:  "The cheerleaders are cheering for the team.", targ_image_ID: "F011.jpg"  ,targ_verb:  "snow"  },
-  { prime_image_ID: "F006.jpg"  ,prime_verb:  "mine"  ,verif_ans:'n', sentence:  "The girl is singing a song.",targ_image_ID: "F012.jpg"  ,targ_verb:  "bounce" }
+  { prime_image_ID: "F006.jpg"  ,prime_verb:  "mine"  ,verif_ans:'n', sentence:  "The girl is singing a song.",targ_image_ID: "F013.jpg"  ,targ_verb:  "balanace" }
   ];
 
   /* full filler stimuli:  37 {prime + targ}*/
@@ -359,12 +360,13 @@ console.log('succ update SUBJ_RAND_ORDER', SUBJ_RAND_ORDER!=null)
       ],
       on_finish: function(data){
         var data=JSON.parse(jsPsych.data.get().last(1).select("responses").values);
-        SUBJECTID = data["Q0"]
-        console.log("SUBJECTID", SUBJECTID)
-        jsPsych.data.addProperties(SUBJ_RAND_ORDER);  // access global RAND_ORDER and save to local  "./img/talking1.jpg")
-        var path = "./"+SUBJECTID+"_randOrder.csv";
-        console.log("path", path)
-        jsPsych.data.get().localSave('csv', SUBJECTID+"_randOrder.csv");
+        SUBJECTID = data["Q0"]      
+        jsPsych.data.get().addToLast(SUBJ_RAND_ORDER)
+        // jsPsych.data.addProperties(SUBJ_RAND_ORDER);  // access global RAND_ORDER and save to local  "./img/talking1.jpg")
+        var my_rand_order = jsPsych.data.get().filter({trial_type:"survey-text"})
+        //var path = document.location.pathname;
+        //var directory = path.substring(path.indexOf('/'), path.lastIndexOf('/'));
+        my_rand_order.localSave('csv', "ASP_v1_"+SUBJECTID+"_randOrder.csv");
       }
     };
 
@@ -391,14 +393,55 @@ console.log('succ update SUBJ_RAND_ORDER', SUBJ_RAND_ORDER!=null)
     post_trial_gap: 1000
   }
 
-  timeline.push(fullscreen_trial, subjectInfo, instructions)
+  var instruction1 = {
+    type: 'html-button-response',
+    stimulus: "<h1> Instructions </h1>"
+    +"<div class='leftp'>"
+    +"<p>In this study, we are asking you to help us vet and examine the quality of a series of images that have been labeled by humans. You will be asked to either judge a description of an image, or to provide a description yourself. To facilitate the task, each image also contains a single word, printed in ALL CAPS, which is a verb that best describes the picture. For example, an image of a begger is begging for money would contain the word BEG.</p></br>"
+     +"<p>Example: </p></div>"
+    +"<img src='./img/verif_example.jpg' border='3'></img></div>"
+    +"</div>",
+    choices: ['Next'],
+  };
+
+  var instruction2 = {
+    type: 'html-button-response',
+    stimulus: "<h1> Instructions </h1>"
+    +"<div class='leftp'>"
+    +"<p>In about half of the cases, the image will be followed by a line of text containing a short description of the image. Each description is a simple, short sentence. In these cases, your job will be <b>to judge whether the image is correct or no by pressing the Y or N keys on the keyboard.</b></p></br>"
+    +"<p>When you judge a description, please remember to focus only on the meaning of the description. Sometimes, accidental grammatical errors were made. We only care that the meaning of the description is correct; as long as the meaning is clear, small grammatical errors (e.g., “The girls dances in the street”) can be forgiven.</p></br></div>",
+    choices: ['Next'],
+  };
+
+  var instruction3 = {
+    type: 'html-button-response',
+    stimulus: "<h1> Instructions </h1>"
+    +"<div class='leftp'>"
+    +"<p>In the other of the cases, the image will be followed by an empty text box. When this is the case, <b>you should enter a short description in the text box.</b></p></br>"
+    +"<p>Example: </p></div>"
+    +"<div><img src='./img/descrip_example.jpg' border='3'></img></div>", 
+    choices: ['Next'],
+  };
+
+  var instruction4 = {
+    type: 'html-button-response',
+    stimulus: "<h1> Instructions </h1>"
+    +"<div class='leftp'>"
+    +"<p>Remember, your description MUST use the word contained in the picture. Make sure that your description is a short, BUT COMPLETE sentence. For example, a picture of a girl with the word “CLAP” can be described as “The girls claps” or the “the girl is clapping”, or “she claps”. However, you cannot simply write “clapping”.</p>"
+    +"</div>"
+    +"<h3> If you have any questions, please ask now. </h3>", 
+    choices: ['Next'],
+  };
+
+  timeline.push(fullscreen_trial, subjectInfo)
+  timeline.push(instruction1, instruction2, instruction3, instruction4)
   console.log('finish update subj info: ', SUBJECTID!=null)
 
 /**************************** PRAC TRIALS **************************/
-
+  
   var practrials = {
     // return randomized list of prac trials
-    timeline_variables: PRAC_STIM,
+    timeline_variables: PRAC_STIM.splice(0,2), // only testing first 2 trials
     randomize_order: true,
     timeline: [
       {
@@ -411,18 +454,18 @@ console.log('succ update SUBJ_RAND_ORDER', SUBJ_RAND_ORDER!=null)
       {
         type: 'categorize-image',
         stimulus: function(){ return 'img/'+jsPsych.timelineVariable('prime_image_ID', true); },
-        stimulus_duration: 3500,
         choices: [78, 89], // n=78; y=89 // 1=49; 0=48
         key_answer: function() {return jsPsych.pluginAPI.convertKeyCharacterToKeyCode(jsPsych.timelineVariable('verif_ans', true))},
         correct_text: "<div><h1> Correct! </h1></div>",
-        incorrect_text: "<div><h1> Wrong! </h1> <p> Remeber, pay attenton to the meaning of the sentence and picture, rather than the grammar or structure. </p></div>",
+        incorrect_text: "<div><h1> Incorrect! </h1>",
         prompt: "<div class='prompt'>"
         +"<p> Does the sentence describe the picture? "
         +"</br> Press Y (Yes) or N (No) </div>",
-        show_stim_with_feedback: true, // not show sti with feedback
         show_stim_with_feedback: false,
-        data: function(){
-          return {verif_asn: jsPsych.timelineVariable('verif_ans')}
+        feedback_duration: 2000,
+
+        data: function() {
+          return {phase: 0, verif_ans: jsPsych.timelineVariable('verif_ans', true)} // prac trial phase
         },
         on_load: function(){
           prime_sentence_div = d3.select("#jspsych-content");
@@ -432,10 +475,10 @@ console.log('succ update SUBJ_RAND_ORDER', SUBJ_RAND_ORDER!=null)
            .append("p")
            // display prime sentence
           .text(function(){return jsPsych.timelineVariable('sentence', true);})
-          .append("div")
-          .append("img")
-          .attr("class", "talking")
-          .attr("src", "./img/talking1.jpg")
+          // .append("div")
+          // .append("img")
+          // .attr("class", "talking")
+          // .attr("src", "./img/talking1.jpg")
         }, 
         on_finish: function(data){
           if(data.verif_ans == 'y'){
@@ -443,7 +486,8 @@ console.log('succ update SUBJ_RAND_ORDER', SUBJ_RAND_ORDER!=null)
           } else {
             var correct = data.key_press == 78; // = jsPsych.pluginAPI.convertKeyCharacterToKeyCode('n');
           }
-          jsPsych.data.addDataToLastTrial( [{verif_ans: data.verif_ans}, {iscorrect: correct}]);
+          jsPsych.data.addDataToLastTrial({resp_iscorrect: correct});
+          jsPsych.data.addDataToLastTrial({verif_response: data.key_press});
         }
       },
       /*picture description task*/
@@ -456,7 +500,13 @@ console.log('succ update SUBJ_RAND_ORDER', SUBJ_RAND_ORDER!=null)
           value: '',
           row: 5,
           column: 50}
-        ]
+        ],
+        data: function() {
+          return {phase: 0} // prac trial phase
+        },
+        on_finish: function(data){
+          // jsPsych.data.addDataToLastTrial({phase: 0});
+        }
       }
     ]
   }
@@ -466,15 +516,13 @@ console.log('succ update SUBJ_RAND_ORDER', SUBJ_RAND_ORDER!=null)
   var start_real_trials = {
     type: 'html-button-response',
     stimulus: '<p>Now you will start the real experiment. </p>'
-    +'<p>You will not get feedback and prompt.</p>'
+    +'<p>You will not get feedback.</p>'
     +'<p>Please remember press Y for YES, N for NO. </p>',
     choices: ['Go!']
   }
-  timeline.push(start_real_trials); 
-
   var realtrials = {
     // return randomized list of prac trials
-    timeline_variables: FULL_STIM.splice(0,10),
+    timeline_variables: FULL_STIM.splice(0,2), // only testing first 2 trials
     // randomize_order: true,
     timeline: [
       {
@@ -487,7 +535,6 @@ console.log('succ update SUBJ_RAND_ORDER', SUBJ_RAND_ORDER!=null)
       {
         type: 'categorize-image',
         stimulus: function(){ return 'img/'+jsPsych.timelineVariable('prime_image_ID', true); },
-        stimulus_duration:3500,
         choices: [78, 89], // n=78; y=89 // 1=49; 0=48
         key_answer: function() {return jsPsych.pluginAPI.convertKeyCharacterToKeyCode(jsPsych.timelineVariable('verif_ans', true))},
         correct_text: "",
@@ -496,10 +543,8 @@ console.log('succ update SUBJ_RAND_ORDER', SUBJ_RAND_ORDER!=null)
         +"<p> Does the sentence describe the picture? "
         +"</br> Press Y (Yes) or N (No) </div>",
         show_stim_with_feedback: false,
-        force_correct_button_press: false,
-        post_trial_gap: 0,
-        data: function(){
-          return {verif_asn: jsPsych.timelineVariable('verif_ans')}
+        data: function() {
+          return {phase: 1, verif_ans: jsPsych.timelineVariable('verif_ans', true)}
         },
         on_load: function(){
           prime_sentence_div = d3.select("#jspsych-content");
@@ -509,10 +554,10 @@ console.log('succ update SUBJ_RAND_ORDER', SUBJ_RAND_ORDER!=null)
            .append("p")
            // display prime sentence
           .text(function(){return jsPsych.timelineVariable('sentence', true);})
-          .append("div")
-          .append("img")
-          .attr("class", "talking")
-          .attr("src", "./img/talking1.jpg")
+          // .append("div")
+          // .append("img")
+          // .attr("class", "talking")
+          // .attr("src", "./img/talking1.jpg")
         }, 
         on_finish: function(data){
           if(data.verif_ans == 'y'){
@@ -520,24 +565,63 @@ console.log('succ update SUBJ_RAND_ORDER', SUBJ_RAND_ORDER!=null)
           } else {
             var correct = data.key_press == 78; // = jsPsych.pluginAPI.convertKeyCharacterToKeyCode('n');
           }
-          jsPsych.data.addDataToLastTrial( [{verif_ans: data.verif_ans}, {iscorrect: correct}]);
+          console.log(correct)
+          jsPsych.data.addDataToLastTrial({resp_iscorrect: correct});
+          jsPsych.data.addDataToLastTrial({verif_response: data.key_press});
         }
       },
       /*picture description task*/
       {
         type: 'image-text',
-        stimulus: function(){ return 'img/'+jsPsych.timelineVariable('targ_image_ID', true); },
+        stimulus: function(){ return 'img/'+jsPsych.timelineVariable('targ_image_ID', true); }, // prac trial phase
         questions: [
           {prompt: "<div class='prompt'>"
           +"Please make a complete sentence to describe the picture (use the verb given):</div>",
           value: '',
           row: 5,
           column: 50}
-        ]
+        ], 
+        data: function() {
+          return {phase: 1} // real trial phase
+        },
+        on_finish: function(data) {
+          // jsPsych.data.addDataToLastTrial({phase: 1});
+        }
       }
     ]
   }
-  timeline.push(realtrials);
+
+  timeline.push(start_real_trials, realtrials);
+
+   /**************************** POST-EXP QUESTION **************************/
+   var post_questionnaire = {
+    type: 'survey-text',
+    preamble: "<h1>Questions About the Experiment</h1>", 
+    questions: [
+    {prompt: '<div class="leftp">'
+    +'<li>Did you notice some grammar errors in sentences? How much did you feel these grammar errors impact your understanding about the meaning?</li>', value: '', rows: 1, columns: 100},
+
+    {prompt: '<div class="leftp">'
+    +'<li>If you had difficulty in judging a description of the picture, which sentence it is?</li>', value: '', rows: 1, columns: 100},
+    
+    {prompt: '<div class="leftp">'
+    +'<li>If you had difficulty in describing one particular picture using given verb, which picture/verb it is?</li>', value: '', rows: 1, columns: 100},
+    
+    {prompt: '<div class="leftp">'
+    +'<li>What do you think this experiment is measruing? The purpose of the experiment? </li>', value: '', rows: 1, columns: 100},
+    
+    {prompt: '<div class="leftp">'
+    +'<li>Tell us your suggestions: (Is the instruction clear and easy to undertand? Is the size of picture/sentence too small/too large? etc. )</li>', value: '', rows:1, columns: 100}
+    ], 
+    button_label: ["SUBMIT"],
+    data: function() {
+          return {phase: 2} // post-questions phase
+        },
+   };
+
+   timeline.push(post_questionnaire);
+
+
   /**************************** END EXP **************************/
 
   var  fullscreen_trial_exit= {
@@ -560,8 +644,9 @@ console.log('succ update SUBJ_RAND_ORDER', SUBJ_RAND_ORDER!=null)
     // preload_images: images
     on_finish: function() {
       // var final_data_file = SUBJDATA+SUBJECTID+'.csv';  "./img/talking1.jpg")
-      jsPsych.data.get().localSave('csv','./ASP_v1_'+SUBJECTID+'.csv');
-      jsPsych.data.displayData();
+      var subject_data = jsPsych.data.get().filter([{phase: 0}, {phase: 1}, {phase: 2}])
+      subject_data.localSave('csv','ASP_v1_'+SUBJECTID+'_data.csv');
+      // post_questionnaire_data.displayData();
     },
     default_iti: 250
   });
