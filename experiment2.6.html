@@ -355,7 +355,7 @@ console.log('succ update SUBJ_RAND_ORDER', SUBJ_RAND_ORDER!=null)
   var subjectInfo = {
       type: 'survey-text',
       questions: [
-        {prompt: 'Subject ID: ', value: '', rows:1, columns: 10},
+        {prompt: 'Subject ID: ', value: '', rows:1, columns: 10}, // format 130 - 150
         // {prompt: 'Condition: ', value: '', rows:1, columns: 10},
       ],
       on_finish: function(data){
@@ -513,6 +513,9 @@ console.log('succ update SUBJ_RAND_ORDER', SUBJ_RAND_ORDER!=null)
   timeline.push(practrials)
 
 /**************************** REAL TRIALS **************************/
+  //var STIM1 = JSON.parse( JSON.stringify( FULL_STIM ) ).splice(0,FULL_STIM.length/2);
+  //var STIM2 = JSON.parse( JSON.stringify( FULL_STIM ) ).splice(FULL_STIM.length/2,FULL_STIM.length);
+
   var start_real_trials = {
     type: 'html-button-response',
     stimulus: '<p>Now you will start the real experiment. </p>'
@@ -520,9 +523,91 @@ console.log('succ update SUBJ_RAND_ORDER', SUBJ_RAND_ORDER!=null)
     +'<p>Please remember press Y for YES, N for NO. </p>',
     choices: ['Go!']
   }
-  var realtrials = {
+  var realtrial1 = {
     // return randomized list of prac trials
-    timeline_variables: FULL_STIM.splice(0,2), // only testing first 2 trials
+    timeline_variables: JSON.parse( JSON.stringify( FULL_STIM ) ).slice(0,1), // only testing first 2 trials
+    // timeline_variables: JSON.parse( JSON.stringify( FULL_STIM ) ).splice(0,FULL_STIM.length/2), 
+    // randomize_order: true,
+    timeline: [
+      {
+        type: 'html-keyboard-response',
+        stimulus: '<h1 class="">+</h1>',
+        choices: jsPsych.NO_KEYS,
+        trial_duration: 1500
+      },
+      /*picture verification task*/
+      {
+        type: 'categorize-image',
+        stimulus: function(){ return 'img/'+jsPsych.timelineVariable('prime_image_ID', true); },
+        choices: [78, 89], // n=78; y=89 // 1=49; 0=48
+        key_answer: function() {return jsPsych.pluginAPI.convertKeyCharacterToKeyCode(jsPsych.timelineVariable('verif_ans', true))},
+        correct_text: "",
+        incorrect_text: "",
+        prompt: "<div class='prompt'>"
+        +"<p> Does the sentence describe the picture? "
+        +"</br> Press Y (Yes) or N (No) </div>",
+        show_stim_with_feedback: false,
+        data: function() {
+          return {phase: 1, verif_ans: jsPsych.timelineVariable('verif_ans', true)}
+        },
+        on_load: function(){
+          prime_sentence_div = d3.select("#jspsych-content");
+          prime_sentence_div
+          .insert("div", "#jspsych-categorize-image-stimulus")
+           .attr("id", "prime_sentence")
+           .append("p")
+           // display prime sentence
+          .text(function(){return jsPsych.timelineVariable('sentence', true);})
+          // .append("div")
+          // .append("img")
+          // .attr("class", "talking")
+          // .attr("src", "./img/talking1.jpg")
+        }, 
+        on_finish: function(data){
+          if(data.verif_ans == 'y'){
+            var correct = data.key_press == 89; // = jsPsych.pluginAPI.convertKeyCharacterToKeyCode('y')
+          } else {
+            var correct = data.key_press == 78; // = jsPsych.pluginAPI.convertKeyCharacterToKeyCode('n');
+          }
+          console.log(correct)
+          jsPsych.data.addDataToLastTrial({resp_iscorrect: correct});
+          jsPsych.data.addDataToLastTrial({verif_response: data.key_press});
+        }
+      },
+      /*picture description task*/
+      {
+        type: 'image-text',
+        stimulus: function(){ return 'img/'+jsPsych.timelineVariable('targ_image_ID', true); }, // prac trial phase
+        questions: [
+          {prompt: "<div class='prompt'>"
+          +"Please make a complete sentence to describe the picture (use the verb given):</div>",
+          value: '',
+          row: 5,
+          column: 50}
+        ], 
+        data: function() {
+          return {phase: 1} // real trial phase
+        },
+        on_finish: function(data) {
+          // jsPsych.data.addDataToLastTrial({phase: 1});
+        }
+      }
+    ]
+  }
+  
+  timeline.push(start_real_trials, realtrial1);
+
+  var short_break = {
+    type: 'html-button-response',
+    stimulus: '<p>Now you have a short break. </p></br>'
+    +'<p>After you are ready, click the button to continue. </p>',
+    choices: ['Continue']
+  }
+
+  var realtrial2 = {
+    // return randomized list of prac trials
+    timeline_variables: JSON.parse( JSON.stringify( FULL_STIM ) ).slice(50,51),  // only testing first 1 trials
+    // timeline_variables: JSON.parse( JSON.stringify( FULL_STIM ) ).slice(FULL_STIM.length/2,FULL_STIM.length), 
     // randomize_order: true,
     timeline: [
       {
@@ -591,7 +676,9 @@ console.log('succ update SUBJ_RAND_ORDER', SUBJ_RAND_ORDER!=null)
     ]
   }
 
-  timeline.push(start_real_trials, realtrials);
+  timeline.push(short_break, realtrial2);
+  console.log("realtrial2")
+  console.log(realtrial2["timeline_variables"])
 
    /**************************** POST-EXP QUESTION **************************/
    var post_questionnaire = {
