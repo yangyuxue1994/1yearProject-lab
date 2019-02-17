@@ -327,7 +327,7 @@ function randomize_trials(){
     if(curr_seq == 'F') {
       // push 1st row of shuffled fillers; full {prime, targ}
       curr_trial = shuffled_FILLERS[fcounter];
-      curr_r_seq = r_seq_prime_targ[fcounter];
+      curr_r_seq = shuffled_FILLERS[fcounter];
       fcounter++;
     }
     final_prime_targ_filler.push(curr_trial);
@@ -338,7 +338,7 @@ function randomize_trials(){
   FULL_STIM = final_prime_targ_filler;
 
   // update to global param
-  SUBJ_RAND_ORDER = r_seq_prime_targ_filler; 
+  SUBJ_RAND_ORDER = r_seq_prime_targ_filler; // TODO: need to
 
   return final_prime_targ_filler;
 };
