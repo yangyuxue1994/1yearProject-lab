@@ -366,7 +366,7 @@ console.log('succ update SUBJ_RAND_ORDER', SUBJ_RAND_ORDER!=null)
         var my_rand_order = jsPsych.data.get().filter({trial_type:"survey-text"})
         //var path = document.location.pathname;
         //var directory = path.substring(path.indexOf('/'), path.lastIndexOf('/'));
-        my_rand_order.localSave('csv', "ASP_v1_"+SUBJECTID+"_randOrder.csv");
+        my_rand_order.localSave('csv', "ASP_v2_"+SUBJECTID+"_randOrder.csv");
       }
     };
 
@@ -732,7 +732,7 @@ console.log('succ update SUBJ_RAND_ORDER', SUBJ_RAND_ORDER!=null)
     on_finish: function() {
       // var final_data_file = SUBJDATA+SUBJECTID+'.csv';  "./img/talking1.jpg")
       var subject_data = jsPsych.data.get().filter([{phase: 0}, {phase: 1}, {phase: 2}])
-      subject_data.localSave('csv','ASP_v1_'+SUBJECTID+'_data.csv');
+      subject_data.localSave('csv','ASP_v2_'+SUBJECTID+'_data.csv');
       // post_questionnaire_data.displayData();
     },
     default_iti: 250
