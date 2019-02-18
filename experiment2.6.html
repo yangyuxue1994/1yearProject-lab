@@ -374,7 +374,8 @@ console.log('succ update SUBJ_RAND_ORDER', SUBJ_RAND_ORDER!=null)
   var fullscreen_trial = {
       type: 'fullscreen',
       fullscreen_mode: true,
-      message: '<p>Welcome to CCDL</p>'
+      message: '<h1>Welcome to CCDL</h1>'
+      +'<p><a href="https://qtrial2019q1az1.qualtrics.com/jfe/form/SV_daSP1BslsiQljrn" target="_blank">Demo Survery</a></p>'
     };
 
   var instructions = {
@@ -433,8 +434,8 @@ console.log('succ update SUBJ_RAND_ORDER', SUBJ_RAND_ORDER!=null)
     choices: ['Next'],
   };
 
-  timeline.push(fullscreen_trial, subjectInfo)
-  timeline.push(instruction1, instruction2, instruction3, instruction4)
+  timeline.push(subjectInfo)
+  timeline.push(fullscreen_trial, instruction1, instruction2, instruction3, instruction4)
   console.log('finish update subj info: ', SUBJECTID!=null)
 
 /**************************** PRAC TRIALS **************************/
