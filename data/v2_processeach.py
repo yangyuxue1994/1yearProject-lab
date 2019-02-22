@@ -7,9 +7,9 @@ import os
 import passive
 
 ## GLOBAL PARAM
-DIR = './'
+DIR = './pre_processing_data/'
 SUBJ_LIST = []
-VER = ''
+VER = 'v2'
 
 def load_prepropdata (subjNum):
 	cols=['prime_type', 'prime_verb','targ_verb','sentence','resp_iscorrect', 'verif_rt', 'descr_rt', 'responses']
