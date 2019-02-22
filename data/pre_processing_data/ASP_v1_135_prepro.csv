@@ -1,0 +1,64 @@
+rt,stimulus,phase,resp_iscorrect,verif_rt,responses,descr_rt,prime_type,sentence,targ_verb,prime_verb,prime_image_ID,verif_ans
+11249,img/S104.jpg,1,True,11249.0,"{""Q0"":""The man fixed the broken pipe.""}",14505.0,AI,The man is give the girl a present.,Fix,Touch,S104.jpg,n
+2320,img/S122.jpg,1,False,2320.0,"{""Q0"":""The pirate couldn't pull the doctor at all.""}",19882.0,AC,The man is raking the leaves.,Pull,Give,S122.jpg,n
+3448,img/S116.jpg,1,True,3448.0,"{""Q0"":""The soldier tickled the robber.""}",13746.0,PI,The leaves are being rake by the man.,Tickle,Rake,S116.jpg,y
+2985,img/S010.jpg,1,True,2985.0,"{""Q0"":""The little boy was scared of the female with the mask.""}",20474.0,PC,The swimmer is being chased by the policeman,Scare,Chase,S010.jpg,y
+15383,img/S071.jpg,1,True,15383.0,"{""Q0"":""The nun was following the soldier with a gun.""}",11506.0,PI,The broom is being hold by the broom,Follow,Push,S071.jpg,n
+3192,img/S027.jpg,1,True,3192.0,"{""Q0"":""The artist was shot the ballerina.""}",31650.0,AC,The sailor is holding the broom.,Shoot,Hold,S027.jpg,y
+2385,img/S007.jpg,1,True,2385.0,"{""Q0"":""The pirate followed the sailor.""}",7891.0,AI,The pirate is chase the thief,Follow,Chase,S007.jpg,y
+5565,img/S029.jpg,1,True,5565.0,"{""Q0"":""The garbage man dumped trash into the truck.""}",14842.0,PC,The car is being pushed by the man,Dump,Hold,S029.jpg,n
+1896,img/S073.jpg,1,True,1896.0,"{""Q0"":""The head chef shot the swimmer from the pool.""}",22002.0,PC,The doctor is being scolded by the professor,Shoot,Push,S073.jpg,n
+3801,img/S080.jpg,1,True,3801.0,"{""Q0"":""She ticlked him, making him laugh.""}",19587.0,AC,The cowboy is slapping the soldier.,Tickle,Scold,S080.jpg,n
+2385,img/S089.jpg,1,True,2385.0,"{""Q0"":""The pirate is pulling the car.""}",8362.0,AI,the cowboy is slap the soldier,Pull,Slap,S089.jpg,y
+3713,img/S012.jpg,1,True,3713.0,"{""Q0"":""The nun kissed the clown.""}",9506.0,PI,The shoe is being chew by the dog,Kiss,Chew,S012.jpg,y
+3305,img/S102.jpg,1,True,3305.0,"{""Q0"":""The artist kissed the ballerina.""}",10618.0,AI,The maid is touch the sailor,Kiss,Touch,S102.jpg,y
+3569,img/S112.jpg,1,True,3569.0,"{""Q0"":""The young boy lifted the bucket.""}",10147.0,PI,The clothes are being iron by the woman.,Lift,Iron,S112.jpg,y
+4841,img/S013.jpg,1,True,4841.0,"{""Q0"":""The repairman fixed the car with his tools.""}",22370.0,AC,The cowboy is pushing the swimmer.,Fix,Clean,S013.jpg,n
+1528,img/S070.jpg,1,True,1528.0,"{""Q0"":""He scooped up two scoops of icream into a cone.""}",21913.0,PC,The doctor is being touched by the maid,Scoop,Push,S070.jpg,n
+5466,img/S103.jpg,1,True,5466.0,"{""Q0"":""The nun kissed the boxer.""}",6698.0,PC,The doctor is being touched by the maid,Kiss,Touch,S103.jpg,y
+9505,img/S051.jpg,1,True,9505.0,"{""Q0"":""The policeman kicked the clown's right knee.""}",19169.0,PI,the ballerina is being push by the cowboy,Kick,Press,S051.jpg,n
+1160,img/S068.jpg,1,True,1160.0,"{""Q0"":""The bird bite the hand.""}",23355.0,AC,The cowboy is pushing the ballerina.,Bite,Push,S068.jpg,y
+5362,img/S101.jpg,1,True,5362.0,"{""Q0"":""The boy fixed his bike.""}",9195.0,AI,The maid is touch the snake,Fix,Touch,S101.jpg,n
+2752,img/S106.jpg,1,True,2752.0,"{""Q0"":""She carved a picture onto the wood.""}",9546.0,PC,The thief is being chased by the policeman,Carve,Touch,S106.jpg,n
+8608,img/S004.jpg,1,True,8608.0,"{""Q0"":""The played hit the ball with his bat.""}",9443.0,AI,The policeman is chase the thief,Hit,Chase,S004.jpg,y
+3000,img/S105.jpg,1,True,3000.0,"{""Q0"":""The artist kissed the soldier.""}",9610.0,PI,the bicycle is being touch by the sailor,Kiss,Touch,S105.jpg,y
+4257,img/S005.jpg,1,True,4257.0,"{""Q0"":""The policeman kicked the boxer's bum.""}",11523.0,AC,The professor is scolding the wrestler.,Kick,Chase,S005.jpg,n
+6592,img/S079.jpg,1,True,6592.0,"{""Q0"":""The pirate was unable to pull the bath tub.""}",20931.0,AC,The professor is scolding the wrestler.,Pull,Scold,S079.jpg,y
+3225,img/S016.jpg,1,True,3225.0,"{""Q0"":""The outfield player catched the flying ball.""}",11842.0,PI,The ballerian is scold by the soldier,Catch,Erase,S016.jpg,n
+2466,img/S075.jpg,1,True,2466.0,"{""Q0"":""The police man kicked a lamp.""}",10322.0,AI,The sodier is scold the ballerina,Kick,Scold,S075.jpg,y
+3993,img/S093.jpg,1,True,3993.0,"{""Q0"":""The cowboy punched the robber.""}",7986.0,PC,The plant is being watered by the woman.,Punch,Slap,S093.jpg,n
+2488,img/S109.jpg,1,True,2488.0,"{""Q0"":""The maid kicked the boxer's shin.""}",11194.0,PC,The mop is being held by the soldier,Kick,Water,S109.jpg,n
+3426,img/S031.jpg,1,True,3426.0,"{""Q0"":""The maid kicked the bottle.""}",9531.0,AI,The soldier is hold the mop,Kick,Hold,S031.jpg,y
+3800,img/S030.jpg,1,True,3800.0,"{""Q0"":""The pirate is pulling the ballerina.""}",7515.0,AC,The man is sending a letter.,Pull,Hold,S030.jpg,n
+2465,img/S124.jpg,1,True,2465.0,"{""Q0"":""The maid tickled the doctor.""}",10186.0,PI,The letter is being send by the man.,Tickle,Send,S124.jpg,y
+1593,img/S095.jpg,1,True,1593.0,"{""Q0"":""The soldier ticked the ballerina.""}",7475.0,AI,the cowboy is slap the ballerina,Tickle,Slap,S095.jpg,y
+3353,img/S008.jpg,1,False,3353.0,"{""Q0"":""The maid kicked the kettle.""}",10018.0,PC,the priest is being slapped by the policeman,Kick,Chase,S008.jpg,n
+2521,img/S091.jpg,1,True,2521.0,"{""Q0"":""The artist kissed the clown.""}",7315.0,PI,the priest is being slap by the policeman,Kiss,Slap,S091.jpg,y
+3001,img/S003.jpg,1,True,3001.0,"{""Q0"":""The nun kissed the ballerina.""}",13555.0,AC,The worker is pushing the cart.,Kiss,chase,S003.jpg,n
+2169,img/S074.jpg,1,True,2169.0,"{""Q0"":""The artist punched the wrestler hard.""}",12715.0,AI,The worker is push the cart,Punch,Push,S074.jpg,y
+1474,img/S028.jpg,1,True,1474.0,"{""Q0"":""The person is hanging clothes on a rope.""}",13818.0,PI,The cane is being hold by the maid,Hang,Hold,S028.jpg,y
+2384,img/S082.jpg,1,True,2384.0,"{""Q0"":""The cowboy punched the crap out of the swimmer.""}",10355.0,PC,The priest is being pushed by the chef,Punch,Scold,S082.jpg,n
+1464,img/S067.jpg,1,True,1464.0,"{""Q0"":""She wrapped up the present with ribbons and strings.""}",10755.0,AC,The soldier is scolding the wrestler.,Wrap,Push,S067.jpg,n
+2089,img/S076.jpg,1,True,2089.0,"{""Q0"":""The woman petted the cat.""}",9122.0,PI,The wrestler is scold by the soldier,Pet,Scold,S076.jpg,y
+2312,img/S100.jpg,1,True,2312.0,"{""Q0"":""The wrester is pulling the box.""}",8274.0,AI,the policeman is slap the swimmer,Pull,Touch,S100.jpg,n
+1488,img/S092.jpg,1,True,1488.0,"{""Q0"":""The baby ducks followed their mother duck.""}",18442.0,AC,The policeman is slapping the swimmer.,Follow,Slap,S092.jpg,y
+1872,img/S072.jpg,1,True,1872.0,"{""Q0"":""The artist shot the robber.""}",14785.0,PC,The apple is being cut by the person.,Shoot,Push,S072.jpg,n
+1361,img/S117.jpg,1,True,1361.0,"{""Q0"":""The artist punched the crap out of the ballerina.""}",12307.0,PI,The apple is cutted by the person.,Punch,Cut,S117.jpg,y
+3465,img/S081.jpg,1,True,3465.0,"{""Q0"":""The artist kissed the wrestler on the cheek.""}",8418.0,AC,The policeman is scolding the priest.,Kiss,Scold,S081.jpg,y
+1800,img/S114.jpg,1,True,1800.0,"{""Q0"":""He was fixing the broken chair with glue.""}",9939.0,AI,The professor is scold the soldier,Fix,Send,S114.jpg,n
+2232,img/S077.jpg,1,True,2232.0,"{""Q0"":""The pirate is pulling the panda.""}",6321.0,PC,the professor is being slapped by the cowboy,Pull,Scold,S077.jpg,n
+2513,img/S088.jpg,1,True,2513.0,"{""Q0"":""The boy dragged the bag with him.""}",7851.0,AI,the chef is push the clown,Drag,Slap,S088.jpg,n
+1505,img/S069.jpg,1,True,1505.0,"{""Q0"":""She squeezed the lemon onto the lettuce leaf.""}",13843.0,PI,the clown is being push by the chef,Squeeze,Push,S069.jpg,y
+1720,img/S032.jpg,1,True,1720.0,"{""Q0"":""The wrestler is pulling the soldier.""}",9346.0,PC,The teapot is being held by the sailor,Pull,Hold,S032.jpg,y
+1945,img/S125.jpg,1,True,1945.0,"{""Q0"":""The cowboy punched the crap out of the ballerina.""}",9763.0,AC,The dog is chasing the cat.,Punch,Pay,S125.jpg,n
+2758,img/S011.jpg,1,True,2758.0,"{""Q0"":""The pirate followed the ballerina.""}",7618.0,AC,The dog is chasing the cat.,Follow,Chase,S011.jpg,y
+5704,img/S009.jpg,1,True,5704.0,"{""Q0"":""The chef shot the wrestler in the stomach.""}",15442.0,AI,The nurse is chase the thief,Shoot,Chase,S009.jpg,y
+1360,img/S119.jpg,1,True,1360.0,"{""Q0"":""The policeman kicked the shoe.""}",9401.0,PI,The sheep is being shave by the man,Kick,Tear,S119.jpg,n
+1472,img/S083.jpg,1,True,1472.0,"{""Q0"":""The cowboy punched the crap out of the doctor.""}",10196.0,PC,the soldier is being slapped by the cowboy,Punch,Shave,S083.jpg,n
+1289,img/S094.jpg,1,True,1289.0,"{""Q0"":""The artist punched the crap out of the clown.""}",10538.0,AC,The cowboy is slapping the sailor.,Punch,Slap,S094.jpg,y
+2496,img/S107.jpg,1,True,2496.0,"{""Q0"":""She is carrying the box.""}",8626.0,PI,The man is being trip by the other man.,Carry,Touch,S107.jpg,n
+1688,img/S108.jpg,1,True,1688.0,"{""Q0"":""She scooped up ice cream.""}",11642.0,AI,the policeman is slap the clown,Scoop,Trip,S108.jpg,n
+2433,img/S090.jpg,1,True,2433.0,"{""Q0"":""The wrester is pulling the clown.""}",7803.0,PC,the clown is being slapped by the policeman,Pull,Slap,S090.jpg,y
+2608,img/S078.jpg,1,True,2608.0,"{""Q0"":""The nun followed the priest.""}",10793.0,PC,The doctor is being chased by the nurse,Follow,Scold,S078.jpg,n
+1378,img/S006.jpg,1,True,1378.0,"{""Q0"":""The maid kicked the robber.""}",7994.0,AC,The boy is throwing a snowball.,Kick,Chase,S006.jpg,n
+1809,img/S120.jpg,1,True,1809.0,"{""Q0"":""The nun kissed the priest.""}",9810.0,AI,The boy is throw a snowball.,Kiss,Throw,S120.jpg,y

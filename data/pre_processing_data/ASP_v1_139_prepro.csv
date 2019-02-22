@@ -1,0 +1,64 @@
+rt,stimulus,phase,resp_iscorrect,verif_rt,responses,descr_rt,prime_type,sentence,targ_verb,prime_verb,prime_image_ID,verif_ans
+17775,img/S101.jpg,1,False,17775.0,"{""Q0"":""the man is fixing stuff""}",12578.0,PI,the clown is being touch by the sailor,Fix,Touch,S101.jpg,y
+3186,img/S016.jpg,1,True,3186.0,"{""Q0"":""the pirate is pulling the man""}",29283.0,AI,The teacher is erase the board,Pull,Erase,S016.jpg,y
+13408,img/S011.jpg,1,True,13408.0,"{""Q0"":""the man is tickling the person""}",30723.0,PC,The man is being tripped by the other man.,Tickle,Chase,S011.jpg,n
+6190,img/S108.jpg,1,True,6190.0,"{""Q0"":""the boy is scared by the person""}",23684.0,AC,The soldier is scolding the wrestler.,Scare,Trip,S108.jpg,n
+9318,img/S076.jpg,1,True,9318.0,"{""Q0"":""the person behind is following the sodier in front""}",27778.0,PI,the thief is being chase by the pirate,Follow,Scold,S076.jpg,n
+4842,img/S007.jpg,1,True,4842.0,"{""Q0"":""the man shoot the person.""}",20621.0,PC,The thief is being chased by the pirate,Shoot,Chase,S007.jpg,y
+3466,img/S119.jpg,1,True,3466.0,"{""Q0"":""the pirate is following the person in front""}",17753.0,AC,The man is shaving the sheep.,Follow,Tear,S119.jpg,n
+5888,img/S083.jpg,1,False,5888.0,"{""Q0"":""the man is dumping the trush""}",13441.0,AI,The man is shave the sheep,Dump,Shave,S083.jpg,y
+3588,img/S077.jpg,1,True,3588.0,"{""Q0"":""the chief is shooting the person""}",25353.0,AC,The man is raking the leaves.,Shoot,Scold,S077.jpg,n
+4344,img/S116.jpg,1,True,4344.0,"{""Q0"":""the women is tickling the man""}",17664.0,AI,The woman is clean the window,Tickle,Rake,S116.jpg,n
+3642,img/S013.jpg,1,True,3642.0,"{""Q0"":""the pirate is pulling a car""}",12285.0,PI,The window is being clean by the woman,Pull,Clean,S013.jpg,y
+5994,img/S067.jpg,1,True,5994.0,"{""Q0"":""the two character are kissing ""}",11671.0,PC,The priest is being pushed by the chef,Kiss,Push,S067.jpg,y
+6050,img/S072.jpg,1,True,6050.0,"{""Q0"":""the painter and the dancer are kissing""}",17483.0,AI,The chef is push the bus,Kiss,Push,S072.jpg,y
+4408,img/S032.jpg,1,True,4408.0,"{""Q0"":""the person is lifting the basket""}",16841.0,AC,The sailor is touching the bicycle.,Lift,Hold,S032.jpg,n
+2464,img/S105.jpg,1,True,2464.0,"{""Q0"":""the worker is fixing the car""}",11217.0,PI,the sailor is being chase by the nun,Fix,Touch,S105.jpg,n
+4026,img/S003.jpg,1,True,4026.0,"{""Q0"":""a person scoop a spoon of ice cream""}",22984.0,PC,The sailor is being chased by the nun.,Scoop,chase,S003.jpg,y
+1948,img/S120.jpg,1,True,1948.0,"{""Q0"":""the nun is kissing the boxer""}",16505.0,AC,The policeman is chasing the thief.,Kiss,Throw,S120.jpg,n
+2745,img/S004.jpg,1,True,2745.0,"{""Q0"":""the soldier just kick the person""}",16457.0,AI,The professor is scold the doctor,Kick,Chase,S004.jpg,n
+5130,img/S080.jpg,1,True,5130.0,"{""Q0"":""the bird is biting the person's hand""}",10618.0,PI,The doctor is being scold by the professor,Bite,Scold,S080.jpg,y
+7219,img/S091.jpg,1,True,7219.0,"{""Q0"":""the men is fixing the bicycle""}",13698.0,PC,the priest is being slapped by the policeman,Fix,Slap,S091.jpg,y
+3120,img/S093.jpg,1,True,3120.0,"{""Q0"":""the person is carving""}",13781.0,AC,The chef is pushing the clown.,Carve,Slap,S093.jpg,n
+3501,img/S069.jpg,1,True,3501.0,"{""Q0"":""the player is hitting the ball""}",16254.0,PC,the clown is being pushed by the chef,Hit,Push,S069.jpg,y
+2777,img/S005.jpg,1,True,2777.0,"{""Q0"":""the women is kissing the men""}",17138.0,AI,the policeman is slap the clown,Kiss,Chase,S005.jpg,n
+5571,img/S090.jpg,1,True,5571.0,"{""Q0"":""the police just kick the boxer""}",18812.0,PI,the clown is being slap by the policeman,Kick,Slap,S090.jpg,y
+3158,img/S078.jpg,1,True,3158.0,"{""Q0"":""the pirate is pulling the tub""}",13635.0,PI,The doctor is being scold by the policeman,Pull,Scold,S078.jpg,y
+4024,img/S100.jpg,1,True,4024.0,"{""Q0"":""the player catches the ball""}",12873.0,PC,the swimmer is being touched by the sailor,Catch,Touch,S100.jpg,y
+2163,img/S031.jpg,1,True,2163.0,"{""Q0"":""the police is kicking an object""}",25462.0,AC,The person is cutting the apple.,Kick,Hold,S031.jpg,n
+1903,img/S117.jpg,1,True,1903.0,"{""Q0"":""the man is punchinig on the thief""}",13887.0,AI,The sodier is scold the ballerina,Punch,Cut,S117.jpg,n
+2649,img/S075.jpg,1,True,2649.0,"{""Q0"":""the women just kick the clown""}",19251.0,AC,The sailor is touching the television.,Kick,Scold,S075.jpg,n
+2637,img/S104.jpg,1,True,2637.0,"{""Q0"":""the women kick away the bottle""}",16010.0,PI,the television is being touch by the sailor,Kick,Touch,S104.jpg,y
+2959,img/S012.jpg,1,True,2959.0,"{""Q0"":""the pirate is pulling the dancer""}",10642.0,PC,The chain is being held by the maid,Pull,Chew,S012.jpg,n
+4047,img/S029.jpg,1,True,4047.0,"{""Q0"":""the maid is tickling the man""}",15042.0,AI,The maid is hold the chain,Tickle,Hold,S029.jpg,y
+2343,img/S010.jpg,1,True,2343.0,"{""Q0"":""the worker is kickling the dancer""}",14327.0,AC,The policeman is chasing the swimmer.,Tickle,Chase,S010.jpg,y
+2921,img/S079.jpg,1,True,2921.0,"{""Q0"":""the maid is kicking the pot away""}",20085.0,PC,The snake is being touched by the maid,Kick,Scold,S079.jpg,n
+3236,img/S106.jpg,1,True,3236.0,"{""Q0"":""the painter is kissing the clown""}",10259.0,AI,The maid is touch the snake,Kiss,Touch,S106.jpg,y
+10083,img/S088.jpg,1,True,10083.0,"{""Q0"":""the praier and the dancer are trying to kiss""}",25670.0,PI,the soldier is being slap by the cowboy,Kiss,Slap,S088.jpg,n
+2903,img/S089.jpg,1,True,2903.0,"{""Q0"":""the painter is punching the boxer""}",14337.0,AC,The cowboy is slapping the soldier.,Punch,Slap,S089.jpg,y
+3361,img/S102.jpg,1,True,3361.0,"{""Q0"":""a person is hanging cloth""}",11380.0,PI,the wheelchair is being push by the cowboy,Hang,Touch,S102.jpg,n
+3673,img/S071.jpg,1,True,3673.0,"{""Q0"":""the cowboy is punching the swimmer""}",13289.0,AI,the cowboy is push the wheelchair,Punch,Push,S071.jpg,y
+3200,img/S094.jpg,1,True,3200.0,"{""Q0"":""the women is wraping a box""}",14416.0,PC,The doctor is being chased by the nurse,Wrap,Slap,S094.jpg,n
+6057,img/S006.jpg,1,True,6057.0,"{""Q0"":""the women pet her dog""}",9209.0,PC,The cane is being held by the maid,Pet,Chase,S006.jpg,n
+9452,img/S028.jpg,1,True,9452.0,"{""Q0"":""the boxer is pulling the box""}",10533.0,PI,The cane is being hold by the maid,Pull,Hold,S028.jpg,y
+2978,img/S051.jpg,1,True,2978.0,"{""Q0"":""the baby duck is following an adult duck""}",33162.0,AC,The person is pressing the doorbell.,Follow,Press,S051.jpg,y
+2518,img/S027.jpg,1,True,2518.0,"{""Q0"":""the men is shooting another man""}",28018.0,AI,The policeman is chase the priest,Shoot,Hold,S027.jpg,n
+7992,img/S008.jpg,1,True,7992.0,"{""Q0"":""the painter is punching the dancer""}",13534.0,AC,The policeman is chasing the priest.,Punch,Chase,S008.jpg,y
+3176,img/S068.jpg,1,True,3176.0,"{""Q0"":""the painter is kissing the boxer""}",13002.0,PI,The clothes are being iron by the woman.,Kiss,Push,S068.jpg,n
+3571,img/S112.jpg,1,True,3571.0,"{""Q0"":""the men is fixing the chair""}",12155.0,AI,The woman is iron the clothes.,Fix,Iron,S112.jpg,y
+6441,img/S070.jpg,1,True,6441.0,"{""Q0"":""the pirate is pulling a panda""}",13301.0,PC,The gun is being held by the soldier,Pull,Push,S070.jpg,n
+2217,img/S030.jpg,1,True,2217.0,"{""Q0"":""the boy is dragging a bag""}",10131.0,PC,The gun is being held by the soldier,Drag,Hold,S030.jpg,y
+3880,img/S074.jpg,1,True,3880.0,"{""Q0"":""the person is squeezing a lemon""}",14523.0,AC,The man is sending a letter.,Squeeze,Push,S074.jpg,n
+3401,img/S114.jpg,1,True,3401.0,"{""Q0"":""the boxer is pulling the soldier""}",24172.0,PI,The letter is being send by the man.,Pull,Send,S114.jpg,y
+13942,img/S125.jpg,1,True,13942.0,"{""Q0"":""the cowboy is punching the dancer""}",12054.0,AI,The policeman is scold the priest.,Punch,Pay,S125.jpg,n
+2387,img/S081.jpg,1,True,2387.0,"{""Q0"":""the dancer is followed by the pirate""}",11379.0,PC,The computer is being touched by the maid,Follow,Scold,S081.jpg,n
+2291,img/S107.jpg,1,True,2291.0,"{""Q0"":""the chief is shooting the boxer""}",11621.0,PI,The computer is being touch by the maid,Shoot,Touch,S107.jpg,y
+2743,img/S073.jpg,1,True,2743.0,"{""Q0"":""the police is kicking a shoe""}",15244.0,AI,the cowboy is slap the ballerina,Kick,Push,S073.jpg,n
+3992,img/S095.jpg,1,True,3992.0,"{""Q0"":""the cowboy punched the man""}",15935.0,AC,The cowboy is slapping the ballerina.,Punch,Slap,S095.jpg,y
+3784,img/S103.jpg,1,True,3784.0,"{""Q0"":""the painter is punching the crown""}",26079.0,PI,the swimmer is being slap by the policeman,Punch,Touch,S103.jpg,n
+1780,img/S092.jpg,1,True,1780.0,"{""Q0"":""the women is carrying a box""}",9293.0,PC,The letter is being sent by the man.,Carry,Slap,S092.jpg,n
+1800,img/S124.jpg,1,True,1800.0,"{""Q0"":""the person is scooping a spoon of ice cream""}",19524.0,AC,The man is sending a letter.,Scoop,Send,S124.jpg,y
+3904,img/S122.jpg,1,True,3904.0,"{""Q0"":""the boxer is pulling a doll""}",13865.0,AI,The man is give the girl a present.,Pull,Give,S122.jpg,y
+4209,img/S109.jpg,1,True,4209.0,"{""Q0"":""the priest is followed by the nun""}",17897.0,PC,The thief is being chased by the nurse,Follow,Water,S109.jpg,n
+2866,img/S009.jpg,1,True,2866.0,"{""Q0"":""the maid id kicking the thief""}",12194.0,PI,The sailor is being scold by the professor,Kick,Chase,S009.jpg,n
+1872,img/S082.jpg,1,True,1872.0,"{""Q0"":""the nun is kissing the sailor""}",12007.0,AC,The professor is scolding the sailor.,Kiss,Scold,S082.jpg,y

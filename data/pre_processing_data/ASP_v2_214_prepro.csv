@@ -1,0 +1,101 @@
+rt,stimulus,phase,resp_iscorrect,verif_rt,responses,descr_rt,prime_image_ID,prime_type,prime_verb,sentence,targ_verb,verif_ans
+4489,img/S009.jpg,1,False,4489.0,"{""Q0"":""The handyman fixes the sink with his tools.""}",13418.0,S009.jpg,PC,Chase,The thief is being chased by the nurse,Fix,y
+17605,img/S073.jpg,1,True,17605.0,"{""Q0"":""He is trying to pull the man with a rope.""}",14406.0,S073.jpg,AI,Push,The man is rake the leaves.,Pull,n
+2428,img/F005.jpg,1,True,2428.0,"{""Q0"":""The author writes his novel.""}",11520.0,F005.jpg,,clap,The man is clap after the performance,write,y
+8957,img/S116.jpg,1,True,8957.0,"{""Q0"":""The soldier is tickling the robber.""}",19017.0,S116.jpg,PI,Rake,the soldier is being slap by the cowboy,Tickle,n
+3602,img/S094.jpg,1,True,3602.0,"{""Q0"":""Using the mask, she scares her friend.""}",14718.0,S094.jpg,AC,Slap,The cowboy is slapping the sailor.,Scare,y
+3475,img/F032.jpg,1,True,3475.0,"{""Q0"":""When unknowing a question, she raises her hand to ask.""}",19471.0,F032.jpg,,whisper,The woman is cooking a burger patty.,raise,n
+2407,img/S078.jpg,1,True,2407.0,"{""Q0"":""The nun follows the army soldier.""}",14923.0,S078.jpg,AI,Scold,the cowboy is slap the ballerina,Follow,n
+2191,img/S095.jpg,1,True,2191.0,"{""Q0"":""He shoots the dancer with his gun.""}",12273.0,S095.jpg,PC,Slap,the ballerina is being slapped by the cowboy,Shoot,y
+1954,img/F021.jpg,1,True,1954.0,"{""Q0"":""He smokes a cigarette with swag.""}",9792.0,F021.jpg,,cry,The girl is smile at the camera.,smoke,n
+2053,img/S010.jpg,1,True,2053.0,"{""Q0"":""The men follow each other in a line.""}",12908.0,S010.jpg,PI,Chase,the wheelchair is being push by the cowboy,Follow,n
+2198,img/S071.jpg,1,True,2198.0,"{""Q0"":""The garbage man dumps the trash into the truck.""}",19289.0,S071.jpg,AC,Push,The cowboy is pushing the wheelchair.,Dump,y
+1685,img/F018.jpg,1,True,1685.0,"{""Q0"":""He eats the sandwhich whole.""}",15624.0,F018.jpg,,salute,The soldier is saluting.,eat,y
+3345,img/S068.jpg,1,True,3345.0,"{""Q0"":""The cook shoots a gun at the swimmer.""}",13695.0,S068.jpg,AC,Push,The policeman is slapping the clown.,Shoot,n
+5098,img/S090.jpg,1,False,5098.0,"{""Q0"":""The lady is tickling the religiously affiliated man.""}",18898.0,S090.jpg,PI,Slap,the clown is being slap by the policeman,Tickle,y
+3443,img/F035.jpg,1,True,3443.0,"{""Q0"":""The lady waits for hours when fishing.""}",14567.0,F035.jpg,,swat,The family is laughing together. ,fish,n
+3595,img/S102.jpg,1,True,3595.0,"{""Q0"":""The man tries to pull the car to no avail.""}",12440.0,S102.jpg,AI,Touch,The maid is touch the sailor,Pull,y
+1980,img/S081.jpg,1,True,1980.0,"{""Q0"":""She is about to kiss the ugly man.""}",14027.0,S081.jpg,PC,Scold,The thief is being chased by the policeman,Kiss,n
+2869,img/F001.jpg,1,False,2869.0,"{""Q0"":""She is curling half her hair.""}",17898.0,F001.jpg,,hammer,The person is hit the nail with the hammer.,curl,y
+3995,img/S004.jpg,1,True,3995.0,"{""Q0"":""They try to kiss but it doesn't work out.""}",11670.0,S004.jpg,PC,Chase,The thief is being chased by the policeman,Kiss,y
+2335,img/S016.jpg,1,True,2335.0,"{""Q0"":""He is too weak to lift to bucket all the way up.""}",12870.0,S016.jpg,AI,Erase,the sailor is touch the television,Lift,n
+2893,img/F004.jpg,1,False,2893.0,"{""Q0"":""The pretty lady dries her hair with a blowdryer.""}",19856.0,F004.jpg,,clap,The person is clap after cleaning.,dry,y
+4458,img/S104.jpg,1,True,4458.0,"{""Q0"":""The big man fixes the car with his tools.""}",11880.0,S104.jpg,AC,Touch,The sailor is touching the television.,Fix,y
+2494,img/S003.jpg,1,True,2494.0,"{""Q0"":""They scoop out ice cream to savor.""}",10777.0,S003.jpg,PI,chase,the wrestler is being slap by the policeman,Scoop,n
+3435,img/F015.jpg,1,True,3435.0,"{""Q0"":""The grandma sneezes and almost dies.""}",11159.0,F015.jpg,,brush,The boy is brushing his teeth.,sneeze,y
+3131,img/S093.jpg,1,True,3131.0,"{""Q0"":""She kisses the boxer.""}",11444.0,S093.jpg,AI,Slap,the policeman is slap the wrestler,Kiss,y
+2113,img/S077.jpg,1,True,2113.0,"{""Q0"":""The policeman kicks the weird guy.""}",11486.0,S077.jpg,AC,Scold,The professor is scolding the soldier.,Kick,y
+1490,img/F016.jpg,1,True,1490.0,"{""Q0"":""She is easily juggling three balls at once.""}",14642.0,F016.jpg,,slip,The man slipped on a banana peel.,juggle,y
+5584,img/S006.jpg,1,True,5584.0,"{""Q0"":""The bird bites off the kids finger.""}",12887.0,S006.jpg,PI,Chase,The girl is being give a present from the man.,Bite,n
+3363,img/S122.jpg,1,True,3363.0,"{""Q0"":""The boy fixes the bike.""}",10301.0,S122.jpg,PC,Give,The swimmer is being chased by the pirate,Fix,n
+1384,img/F030.jpg,1,True,1384.0,"{""Q0"":""He skates around very fast.""}",10230.0,F030.jpg,,smile,The little boy is crying.,skate,n
+3054,img/S005.jpg,1,True,3054.0,"{""Q0"":""They carve out a picture from wood.""}",11992.0,S005.jpg,AI,Chase,The pirate is chase the swimmer,Carve,y
+2527,img/S109.jpg,1,True,2527.0,"{""Q0"":""The baseball player hits the baseball.""}",8921.0,S109.jpg,PC,Water,The apple is being cut by the person.,Hit,n
+1166,img/F029.jpg,1,True,1166.0,"{""Q0"":""The dog barks at enemy dogs.""}",11327.0,F029.jpg,,shock,The girl is crying. ,bark,n
+1874,img/S117.jpg,1,True,1874.0,"{""Q0"":""The solider kisses the painter.""}",11449.0,S117.jpg,AC,Cut,The man is tripping the other man.,Kiss,n
+2749,img/S108.jpg,1,True,2749.0,"{""Q0"":""The policeman kicks the boxer in the butt.""}",13672.0,S108.jpg,PI,Trip,The man is being trip by the other man.,Kick,y
+2952,img/F037.jpg,1,True,2952.0,"{""Q0"":""She swims in a pond.""}",6830.0,F037.jpg,,mine,The girl is singing a song.,swim,n
+1641,img/S082.jpg,1,True,1641.0,"{""Q0"":""He is trying to pull the bathtub but he is too weak.""}",14825.0,S082.jpg,AI,Scold,The professor is scold the sailor,Pull,y
+3874,img/S114.jpg,1,True,3874.0,"{""Q0"":""The outfielder catches the fly ball.""}",18998.0,S114.jpg,PI,Send,the bicycle is being touch by the sailor,Catch,n
+2082,img/F002.jpg,1,True,2082.0,"{""Q0"":""She is coughing and about to die.""}",10110.0,F002.jpg,,beg,The man is beg for money on the street.,cough,y
+1577,img/S105.jpg,1,True,1577.0,"{""Q0"":""Policeman kicks the lamp.""}",10611.0,S105.jpg,AC,Touch,The policeman is slapping the swimmer.,Kick,n
+2101,img/S092.jpg,1,True,2101.0,"{""Q0"":""Cowboy punches the thief.""}",11004.0,S092.jpg,PC,Slap,the swimmer is being slapped by the policeman,Punch,y
+2345,img/F010.jpg,1,True,2345.0,"{""Q0"":""She combs her thick hair.""}",10792.0,F010.jpg,,hatch,The chick just hatch.,comb,y
+1791,img/S076.jpg,1,True,1791.0,"{""Q0"":""She kicks the weird guy in the shin.""}",12549.0,S076.jpg,PI,Scold,the thief is being chase by the pirate,Kick,n
+2154,img/S007.jpg,1,True,2154.0,"{""Q0"":""She kicks the alcohol but she is an addict.""}",17494.0,S007.jpg,AI,Chase,The pirate is chase the thief,Kick,y
+1635,img/F023.jpg,1,True,1635.0,"{""Q0"":""The babies is crawling around the yard.""}",12440.0,F023.jpg,,cook,The two girls are whisper.,crawl,n
+2490,img/S051.jpg,1,True,2490.0,"{""Q0"":""He is trying to pull but he is weaker than the ballerina.""}",11740.0,S051.jpg,AC,Press,The cowboy is slapping the soldier.,Pull,n
+2903,img/S089.jpg,1,True,2903.0,"{""Q0"":""She is tickling the doctor.""}",10326.0,S089.jpg,PC,Slap,the soldier is being slapped by the cowboy,Tickle,y
+2338,img/F019.jpg,1,True,2338.0,"{""Q0"":""The leaky faucet goes drip drip drip.""}",12369.0,F019.jpg,,dip,The person is dipping the chip in sauce.,drip,y
+1229,img/S012.jpg,1,True,1229.0,"{""Q0"":""The policeman tickles the scary ballerina.""}",10986.0,S012.jpg,AC,Chew,The dog is chewing the shoe.,Tickle,y
+1962,img/S083.jpg,1,True,1962.0,"{""Q0"":""The addict kicks the coffee jug.""}",11519.0,S083.jpg,PI,Shave,The cart is being push by the worker,Kick,n
+1664,img/F003.jpg,1,True,1664.0,"{""Q0"":""The child hides in the sheets.""}",10532.0,F003.jpg,,bow,The gentleman is bow to the crowd.,hide,y
+1393,img/S074.jpg,1,True,1393.0,"{""Q0"":""The girl kisses the weird guy.""}",8269.0,S074.jpg,PC,Push,The cart is being pushed by the worker,Kiss,y
+1605,img/S011.jpg,1,True,1605.0,"{""Q0"":""She tries to kiss the dancer.""}",7495.0,S011.jpg,AI,Chase,the policeman is slap the priest,Kiss,n
+1443,img/F009.jpg,1,True,1443.0,"{""Q0"":""He drills the gun.""}",12653.0,F009.jpg,,parachute,The man is parachute to the ground.,drill,y
+2056,img/S091.jpg,1,True,2056.0,"{""Q0"":""An artist punches the boxer.""}",9666.0,S091.jpg,PI,Slap,The letter is being send by the man.,Punch,n
+1706,img/S124.jpg,1,True,1706.0,"{""Q0"":""She hangs her clothes in the open.""}",12290.0,S124.jpg,PC,Send,The letter is being sent by the man.,Hang,y
+6084,img/F034.jpg,1,True,6084.0,"{""Q0"":""The girl kneels before her man.""}",8959.0,F034.jpg,,buckle,The woman is making the bed.,kneel,n
+1348,img/S119.jpg,1,True,1348.0,"{""Q0"":""The cowboy punches the swimmer.""}",10446.0,S119.jpg,AI,Tear,The maid is touch the computer,Punch,n
+2135,img/S107.jpg,1,True,2135.0,"{""Q0"":""The girl wraps her presents.""}",9919.0,S107.jpg,AC,Touch,The maid is touching the computer.,Wrap,y
+949,img/F012.jpg,1,True,949.0,"{""Q0"":""The boy falls from the ladder.""}",10440.0,F012.jpg,,bounce,The boy is bouncing the basketball.,fall,y
+3478,img/S008.jpg,1,True,3478.0,"{""Q0"":""She pets the cat.""}",6705.0,S008.jpg,PC,Chase,The broom is being held by the sailor,Pet,n
+3058,img/S027.jpg,1,True,3058.0,"{""Q0"":""The boxer can not pull the box.""}",11848.0,S027.jpg,AC,Hold,The sailor is holding the broom.,Pull,y
+2408,img/F026.jpg,1,True,2408.0,"{""Q0"":""The man conducts the orchestra.""}",14623.0,F026.jpg,,laugh,The grandmother swat at the fly.,conduct,n
+1512,img/S013.jpg,1,True,1512.0,"{""Q0"":""The ducklings follow their mom.""}",9188.0,S013.jpg,AI,Clean,The woman is clean the window,Follow,y
+1852,img/S072.jpg,1,True,1852.0,"{""Q0"":""The painter shoots a t the robber.""}",8325.0,S072.jpg,PI,Push,the professor is being slap by the cowboy,Shoot,n
+1265,img/F020.jpg,1,True,1265.0,"{""Q0"":""The baseball player is so bad and misses the ball.""}",11537.0,F020.jpg,,cry,The boy shock himself.,miss,n
+1330,img/S088.jpg,1,True,1330.0,"{""Q0"":""The artist punches the ballerina.""}",12859.0,S088.jpg,PI,Slap,The wrestler is being scold by the professor,Punch,n
+2004,img/S079.jpg,1,True,2004.0,"{""Q0"":""She kisses the boxer.""}",8038.0,S079.jpg,AC,Scold,The professor is scolding the wrestler.,Kiss,y
+2203,img/F013.jpg,1,True,2203.0,"{""Q0"":""The man begs to hitchhike.""}",9423.0,F013.jpg,,balanace,The acrobat is balancing on the rope.,hitchhike,y
+1960,img/S070.jpg,1,True,1960.0,"{""Q0"":""The weird guy fixes the chair.""}",9675.0,S070.jpg,PC,Push,the swimmer is being pushed by the cowboy,Fix,y
+1370,img/S029.jpg,1,True,1370.0,"{""Q0"":""The man pulls the fat panda.""}",11891.0,S029.jpg,AI,Hold,The soldier is hold the mop,Pull,n
+1184,img/F033.jpg,1,True,1184.0,"{""Q0"":""She lights her candle.""}",9502.0,F033.jpg,,ski,The man is boxing.,light,n
+1159,img/S031.jpg,1,True,1159.0,"{""Q0"":""He drags his suitcase but it's too big.""}",12402.0,S031.jpg,AI,Hold,The man is pay for milk.,Drag,n
+1951,img/S125.jpg,1,True,1951.0,"{""Q0"":""The juice is squeezed out.""}",12577.0,S125.jpg,PC,Pay,The milk is being paid for by the man.,Squeeze,y
+1789,img/F017.jpg,1,True,1789.0,"{""Q0"":""The candle is being lighted.""}",10202.0,F017.jpg,,shower,The person is showering. ,light,y
+3063,img/S080.jpg,1,True,3063.0,"{""Q0"":""The boxer pulls the army soldier.""}",10054.0,S080.jpg,PI,Scold,the clown is being touch by the sailor,Pull,n
+2624,img/S101.jpg,1,True,2624.0,"{""Q0"":""The cowboy punches the ballerina.""}",14743.0,S101.jpg,AC,Touch,The sailor is touching the clown.,Punch,y
+2320,img/F007.jpg,1,True,2320.0,"{""Q0"":""The surgeon operates on the body.""}",11950.0,F007.jpg,,bounce,The boy is bounce the basketball.,operate,y
+2802,img/S032.jpg,1,True,2802.0,"{""Q0"":""The pirate creepily follows the dancer.""}",16046.0,S032.jpg,PI,Hold,The snowmall is being throw by the boy.,Follow,n
+1674,img/S120.jpg,1,True,1674.0,"{""Q0"":""The cook shoots and kills the boxer.""}",10984.0,S120.jpg,PC,Throw,The snowball is being thrown by the boy.,Shoot,y
+2494,img/F022.jpg,1,True,2494.0,"{""Q0"":""She knights him with her long sword.""}",11305.0,F022.jpg,,golf,The boy is camp in the forest.,knight,n
+2418,img/S100.jpg,1,True,2418.0,"{""Q0"":""The policeman kicks  the shoe.""}",7905.0,S100.jpg,AI,Touch,The sodier is scold the ballerina,Kick,n
+1523,img/S075.jpg,1,True,1523.0,"{""Q0"":""The cowboy punches the doctor.""}",10677.0,S075.jpg,AC,Scold,The soldier is scolding the ballerina.,Punch,y
+1914,img/F036.jpg,1,True,1914.0,"{""Q0"":""She sleeps for hours in her bed.""}",10864.0,F036.jpg,,mop,The cheerleaders are cheering for the team.,sleep,n
+1545,img/S112.jpg,1,True,1545.0,"{""Q0"":""The painter punches the man.""}",9652.0,S112.jpg,AI,Iron,The soldier is hold the gun,Punch,n
+1136,img/S030.jpg,1,True,1136.0,"{""Q0"":""She is carrying a box.""}",8369.0,S030.jpg,AC,Hold,The soldier is holding the gun.,Carry,y
+1396,img/F028.jpg,1,True,1396.0,"{""Q0"":""He fences against no one.""}",10713.0,F028.jpg,,sing,The workers are mine.,fence,n
+2392,img/S067.jpg,1,True,2392.0,"{""Q0"":""She gets a few scoops of ice cream.""}",10278.0,S067.jpg,PI,Push,The priest is being push by the chef,Scoop,y
+2971,img/S069.jpg,1,True,2971.0,"{""Q0"":""The boxer pulls the clown.""}",11083.0,S069.jpg,PC,Push,The snake is being touched by the maid,Pull,n
+1879,img/F011.jpg,1,True,1879.0,"{""Q0"":""He irons the sheets.""}",6459.0,F011.jpg,,snow,It is snowing right now.,iron,y
+1364,img/S106.jpg,1,True,1364.0,"{""Q0"":""She follows the other priest.""}",9934.0,S106.jpg,AC,Touch,The maid is touching the snake.,Follow,y
+1515,img/S103.jpg,1,True,1515.0,"{""Q0"":""She kicks the theif.""}",5880.0,S103.jpg,AI,Touch,The maid is touch the doctor,Kick,y
+1740,img/F025.jpg,1,True,1740.0,"{""Q0"":""The dog howls into the night.""}",8852.0,F025.jpg,,make,The person buckle their shoes.,howl,n
+1055,img/S028.jpg,1,True,1055.0,"{""Q0"":""She kisses the other priest.""}",7224.0,S028.jpg,PC,Hold,The thief is being chased by the nurse,Kiss,n
+1054,img/F024.jpg,1,True,1054.0,"{""Q0"":""He makes the bed.""}",5400.0,F024.jpg,,box,The man is ski down the mountain.,make,n
+1118,img/F027.jpg,1,True,1118.0,"{""Q0"":""He hits the hammer into the nail.""}",8482.0,F027.jpg,,cheer,The woman is mop the floor.,hammer,n
+1375,img/F006.jpg,1,True,1375.0,"{""Q0"":""They celebrate the birthday.""}",8431.0,F006.jpg,,play,The girl is play the piano.,celebrate,y
+1255,img/F014.jpg,1,True,1255.0,"{""Q0"":""She jumps from one side to the other.""}",9112.0,F014.jpg,,row,The boy is rowing his boat. ,jump,y
+1295,img/F008.jpg,1,True,1295.0,"{""Q0"":""She knits a thing.""}",7568.0,F008.jpg,,curtsy,The girl is curtsy.,knit,y
+1010,img/F031.jpg,1,True,1010.0,"{""Q0"":""He sails his boat.""}",6516.0,F031.jpg,,camp,The two men are golfing.,sail,n

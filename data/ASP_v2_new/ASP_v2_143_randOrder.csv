@@ -1,0 +1,101 @@
+,prime_image_ID,prime_type,prime_verb,sentence,targ_image_ID,targ_verb,verif_ans
+0,S103.jpg,AI,Touch,the cowboy is push the wheelchair,S017.jpg,Fix,n
+1,S071.jpg,PI,Push,The sheep is being shave by the man,S055.jpg,Pull,n
+2,F035.jpg,,swat,The family is laughing together. ,F072.jpg,fish,n
+3,S083.jpg,PC,Shave,The sheep is being shaved by the man,S099.jpg,Tickle,y
+4,S075.jpg,AC,Scold,The soldier is scolding the ballerina.,S113.jpg,Scare,y
+5,F014.jpg,,row,The boy is rowing his boat. ,F051.jpg,jump,y
+6,S106.jpg,PI,Touch,the swimmer is being touch by the sailor,S024.jpg,Follow,n
+7,S100.jpg,AI,Touch,the sailor is touch the swimmer,S087.jpg,Shoot,y
+8,F034.jpg,,buckle,The woman is making the bed.,F071.jpg,kneel,n
+9,S012.jpg,AC,Chew,The dog is chewing the shoe.,S023.jpg,Follow,y
+10,S089.jpg,PC,Slap,The priest is being chased by the policeman,S015.jpg,Dump,n
+11,F022.jpg,,golf,The boy is camp in the forest.,F059.jpg,knight,n
+12,S008.jpg,PC,Chase,The priest is being chased by the policeman,S086.jpg,Shoot,y
+13,S081.jpg,AI,Scold,the sailor is touch the bicycle,S097.jpg,Tickle,n
+14,F033.jpg,,ski,The man is boxing.,F070.jpg,light,n
+15,S105.jpg,AC,Touch,The sailor is touching the bicycle.,S057.jpg,Pull,y
+16,S102.jpg,PI,Touch,The car is being push by the man,S042.jpg,Kiss,n
+17,F011.jpg,,snow,It is snowing right now.,F048.jpg,iron,y
+18,S073.jpg,PC,Push,The car is being pushed by the man,S041.jpg,Kiss,y
+19,S120.jpg,PI,Throw,the wrestler is being slap by the policeman,S049.jpg,Lift,n
+20,F002.jpg,,beg,The man is beg for money on the street.,F039.jpg,cough,y
+21,S093.jpg,AI,Slap,The soldier is hold the mop,S018.jpg,Fix,n
+22,S031.jpg,AC,Hold,The soldier is holding the mop.,S123.jpg,Scoop,y
+23,F036.jpg,,mop,The cheerleaders are cheering for the team.,F073.jpg,sleep,n
+24,S076.jpg,PC,Scold,The bus is being pushed by the chef,S045.jpg,Kiss,n
+25,S072.jpg,AI,Push,The chef is push the bus,S033.jpg,Kick,y
+26,F030.jpg,,smile,The little boy is crying.,F067.jpg,skate,n
+27,S104.jpg,AC,Touch,The policeman is slapping the priest.,S115.jpg,Bite,n
+28,S091.jpg,PI,Slap,the priest is being slap by the policeman,S019.jpg,Fix,y
+29,F027.jpg,,cheer,The woman is mop the floor.,F064.jpg,hammer,n
+30,S069.jpg,AI,Push,the chef is push the clown,S126.jpg,Carve,y
+31,S094.jpg,PC,Slap,The computer is being touched by the maid,S026.jpg,Hit,n
+32,F006.jpg,,play,The girl is play the piano.,F043.jpg,celebrate,y
+33,S107.jpg,AC,Touch,The nurse is chasing the doctor.,S046.jpg,Kiss,n
+34,S006.jpg,PI,Chase,The doctor is being chase by the nurse,S034.jpg,Kick,y
+35,F007.jpg,,bounce,The boy is bounce the basketball.,F044.jpg,operate,y
+36,S013.jpg,AC,Clean,The sailor is holding the broom.,S059.jpg,Pull,n
+37,S027.jpg,PI,Hold,The priest is being push by the chef,S002.jpg,Catch,n
+38,F023.jpg,,cook,The two girls are whisper.,F060.jpg,crawl,n
+39,S067.jpg,PC,Push,The priest is being pushed by the chef,S037.jpg,Kick,y
+40,S112.jpg,AI,Iron,The woman is iron the clothes.,S060.jpg,Punch,y
+41,F004.jpg,,clap,The person is clap after cleaning.,F041.jpg,dry,y
+42,S068.jpg,PC,Push,the ballerina is being pushed by the cowboy,S035.jpg,Kick,y
+43,S009.jpg,AC,Chase,The man is raking the leaves.,S039.jpg,Kick,n
+44,F025.jpg,,make,The person buckle their shoes.,F062.jpg,howl,n
+45,S116.jpg,PI,Rake,The leaves are being rake by the man.,S052.jpg,Pull,y
+46,S079.jpg,AI,Scold,The man is send a letter.,S096.jpg,Tickle,n
+47,F009.jpg,,parachute,The man is parachute to the ground.,F046.jpg,drill,y
+48,S114.jpg,AC,Send,The man is giving the girl a present.,S098.jpg,Tickle,n
+49,S122.jpg,PI,Give,the swimmer is being slap by the policeman,S040.jpg,Kick,n
+50,F013.jpg,,balanace,The acrobat is balancing on the rope.,F050.jpg,hitchhike,y
+51,S092.jpg,AI,Slap,the policeman is slap the swimmer,S048.jpg,Kiss,y
+52,S032.jpg,PC,Hold,The teapot is being held by the sailor,S047.jpg,Kiss,y
+53,F037.jpg,,mine,The girl is singing a song.,F074.jpg,swim,n
+54,S088.jpg,PI,Slap,The board is being erase by the teacher,S064.jpg,Punch,n
+55,S016.jpg,AI,Erase,The teacher is erase the board,S111.jpg,Hang,y
+56,F005.jpg,,clap,The man is clap after the performance,F042.jpg,write,y
+57,S119.jpg,PC,Tear,The thief is being chased by the pirate,S061.jpg,Punch,n
+58,S007.jpg,AC,Chase,The pirate is chasing the thief.,S110.jpg,Wrap,y
+59,F019.jpg,,dip,The person is dipping the chip in sauce.,F056.jpg,drip,y
+60,S011.jpg,PI,Chase,The cat is being chase by the dog,S050.jpg,Pet,y
+61,S029.jpg,AI,Hold,The professor is scold the sailor,S058.jpg,Pull,n
+62,F010.jpg,,hatch,The chick just hatch.,F047.jpg,comb,y
+63,S082.jpg,AC,Scold,The professor is scolding the sailor.,S025.jpg,Follow,y
+64,S090.jpg,PC,Slap,The letter is being sent by the man.,S085.jpg,Shoot,n
+65,F020.jpg,,cry,The boy shock himself.,F057.jpg,miss,n
+66,S124.jpg,AC,Send,The man is sending a letter.,S065.jpg,Punch,y
+67,S108.jpg,PC,Trip,The doorbell is being pressed by the person,S043.jpg,Kiss,n
+68,F021.jpg,,cry,The girl is smile at the camera.,F058.jpg,smoke,n
+69,S051.jpg,PI,Press,The doorbell is being press by the person,S020.jpg,Fix,y
+70,S010.jpg,AI,Chase,The policeman is scold the doctor,S056.jpg,Pull,n
+71,F024.jpg,,box,The man is ski down the mountain.,F061.jpg,make,n
+72,S078.jpg,PI,Scold,the thief is being chase by the policeman,S014.jpg,Drag,n
+73,S004.jpg,AC,Chase,The policeman is chasing the thief.,S118.jpg,Squeeze,y
+74,F015.jpg,,brush,The boy is brushing his teeth.,F052.jpg,sneeze,y
+75,S028.jpg,AI,Hold,The maid is hold the cane,S054.jpg,Pull,y
+76,S095.jpg,PC,Slap,The milk is being paid for by the man.,S066.jpg,Punch,n
+77,F026.jpg,,laugh,The grandmother swat at the fly.,F063.jpg,conduct,n
+78,S125.jpg,PI,Pay,The milk is being pay for by the man.,S021.jpg,Follow,y
+79,S101.jpg,AI,Touch,The woman is water the plant.,S084.jpg,Shoot,n
+80,F029.jpg,,shock,The girl is crying. ,F066.jpg,bark,n
+81,S109.jpg,PC,Water,The swimmer is being chased by the pirate,S038.jpg,Kick,n
+82,S005.jpg,AC,Chase,The pirate is chasing the swimmer.,S062.jpg,Punch,y
+83,F001.jpg,,hammer,The person is hit the nail with the hammer.,F038.jpg,curl,y
+84,S030.jpg,PI,Hold,the swimmer is being push by the cowboy,S063.jpg,Punch,n
+85,S070.jpg,AC,Push,The professor is scolding the doctor.,S001.jpg,Carry,n
+86,F032.jpg,,whisper,The woman is cooking a burger patty.,F069.jpg,raise,n
+87,S080.jpg,PC,Scold,The doctor is being scolded by the professor,S121.jpg,Scoop,y
+88,S077.jpg,AI,Scold,The professor is scold the soldier,S053.jpg,Pull,y
+89,F031.jpg,,camp,The two men are golfing.,F068.jpg,sail,n
+90,S003.jpg,PI,chase,The cart is being push by the worker,S022.jpg,Follow,n
+91,S074.jpg,AI,Push,The worker is push the cart,S036.jpg,Kick,y
+92,F017.jpg,,shower,The person is showering. ,F054.jpg,light,y
+93,S117.jpg,AC,Cut,The person is cutting the apple.,S044.jpg,Kiss,y
+94,F018.jpg,,salute,The soldier is saluting.,F055.jpg,eat,y
+95,F016.jpg,,slip,The man slipped on a banana peel.,F053.jpg,juggle,y
+96,F008.jpg,,curtsy,The girl is curtsy.,F045.jpg,knit,y
+97,F012.jpg,,bounce,The boy is bouncing the basketball.,F049.jpg,fall,y
+98,F028.jpg,,sing,The workers are mine.,F065.jpg,fence,n
+99,F003.jpg,,bow,The gentleman is bow to the crowd.,F040.jpg,hide,y
