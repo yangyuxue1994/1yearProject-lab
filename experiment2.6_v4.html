@@ -224,7 +224,7 @@ console.log('udpate SUBJ_RAND_ORDER: ' + SUBJ_RAND_ORDER==null)
         stimulus: '<h1 class="prompt"> Press <b>Any Key</b> to start practice task! </h1>',
         choices: jsPsych.ALL_KEYS,
       }
-  timeline.push(fullscreen_trial, subjectInfo, instruction1, instruction2, instruction3, instruction4)
+  timeline.push(subjectInfo, fullscreen_trial, instruction1, instruction2, instruction3, instruction4)
   timeline.push(paring, before_prac_trial)
   console.log('finish update subj info: ', SUBJECTID!=null)
 
