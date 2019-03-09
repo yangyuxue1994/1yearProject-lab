@@ -155,7 +155,7 @@ var randomize = function(){
     // add jpg end 
     rand_BlockA[i] = add_jpg(rand_BlockA[i])
     rand_BlockP[i] = add_jpg(rand_BlockP[i])
-    
+
     temp.push(rand_BlockA[i])
     temp.push(rand_BlockP[i])
 
@@ -176,7 +176,7 @@ console.log('udpate SUBJ_RAND_ORDER: ' + SUBJ_RAND_ORDER==null)
       type: 'survey-text',
       questions: [
         {prompt: 'Subject ID: ', value: '', rows:1, columns: 10}, // format 130 - 150
-        {prompt: 'VERSION: ', value: 'v4', rows:1, columns: 10},
+        {prompt: 'VERSION: ', value: 'v5', rows:1, columns: 10},
       ],
       on_finish: function(data){
         var data=JSON.parse(jsPsych.data.get().last(1).select("responses").values);
