@@ -34,7 +34,7 @@
 
   /********************* GLOBAL PARAM *******************/
   var timeline = [];
-  var VER = 'v4';
+  var VER = 'v5';
   var SUBJECTID = null; // experimenter enter subject ID: 001
   var FULL_STIM = null; // need to randomized -> check null before exp starts
   var SUBJ_RAND_ORDER = null; // a object type {trialNum:[trial_num, prime_image_ID, prime_verb, prime_type, verif_ans, targ_image_ID]}
@@ -42,7 +42,6 @@
   // var SUBJRAND = './subject_rand_order/';
   var VERIF_TIME = [1,4]
   var DESCR_TIME = [4,9]
-
 
 
   /********************* STIMULI PARAM *******************/
@@ -53,53 +52,52 @@ var PRAC_STIM = [
   ];
 
 
-// 03/01 update stimuli input
-var BlockAC = [
-{	T_verb:	"chase"	,T_image_ID:	"T01.jpg"	,P_image_ID:	"P01.jpg"	,P_type:	"AC"	,P_sentence:	"The nun chases the sailor."	,verif_ans:	"y"	},
-{	T_verb:	"follow"	,T_image_ID:	"T08.jpg"	,P_image_ID:	"P15.jpg"	,P_type:	"AC"	,P_sentence:	"The pirate follows the robber."	,verif_ans:	"y"	},
-{	T_verb:	"kick"	,T_image_ID:	"P02.jpg"	,P_image_ID:	"P06.jpg"	,P_type:	"AC"	,P_sentence:	"The boxer kicks the policeman."	,verif_ans:	"n"	},
-{	T_verb:	"kiss"	,T_image_ID:	"T17.jpg"	,P_image_ID:	"P33.jpg"	,P_type:	"AC"	,P_sentence:	"The artist kisses the ballerina."	,verif_ans:	"y"	},
-{	T_verb:	"pull"	,T_image_ID:	"P34.jpg"	,P_image_ID:	"P38.jpg"	,P_type:	"AC"	,P_sentence:	"The soldier pulls the boxer. "	,verif_ans:	"n"	},
-{	T_verb:	"punch"	,T_image_ID:	"T11.jpg"	,P_image_ID:	"P21.jpg"	,P_type:	"AC"	,P_sentence:	"The artist punches the ballerina."	,verif_ans:	"y"	},
-{	T_verb:	"scold"	,T_image_ID:	"T14.jpg"	,P_image_ID:	"P27.jpg"	,P_type:	"AC"	,P_sentence:	"The professor scolds the boxer."	,verif_ans:	"y"	},
-{	T_verb:	"slap"	,T_image_ID:	"T24.jpg"	,P_image_ID:	"P47.jpg"	,P_type:	"AC"	,P_sentence:	"The policeman slaps the monk."	,verif_ans:	"y"	},
-{	T_verb:	"touch"	,T_image_ID:	"P18.jpg"	,P_image_ID:	"P22.jpg"	,P_type:	"AC"	,P_sentence:	"The sailor touches the waitress."	,verif_ans:	"n"	}
-];
-
-var BlockAI = [
-{	T_verb:	"chase"	,T_image_ID:	"T03.jpg"	,P_image_ID:	"P05.jpg"	,P_type:	"AI"	,P_sentence:	"The policeman chase the monk."	,verif_ans:	"y"	},
-{	T_verb:	"follow"	,T_image_ID:	"T06.jpg"	,P_image_ID:	"P11.jpg"	,P_type:	"AI"	,P_sentence:	"The nun follow the monk."	,verif_ans:	"y"	},
-{	T_verb:	"kiss"	,T_image_ID:	"T19.jpg"	,P_image_ID:	"P37.jpg"	,P_type:	"AI"	,P_sentence:	"The artist kiss the boxer."	,verif_ans:	"y"	},
-{	T_verb:	"punch"	,T_image_ID:	"T09.jpg"	,P_image_ID:	"P17.jpg"	,P_type:	"AI"	,P_sentence:	"The cowboy punch the swimmer."	,verif_ans:	"y"	},
-{	T_verb:	"push"	,T_image_ID:	"P10.jpg"	,P_image_ID:	"P12.jpg"	,P_type:	"AI"	,P_sentence:	"The chef push the clown."	,verif_ans:	"n"	},
-{	T_verb:	"scold"	,T_image_ID:	"T16.jpg"	,P_image_ID:	"P31.jpg"	,P_type:	"AI"	,P_sentence:	"The policeman scold the monk."	,verif_ans:	"y"	},
-{	T_verb:	"shot"	,T_image_ID:	"P26.jpg"	,P_image_ID:	"P28.jpg"	,P_type:	"AI"	,P_sentence:	"The robber shoot the artist."	,verif_ans:	"n"	},
-{	T_verb:	"slap"	,T_image_ID:	"T22.jpg"	,P_image_ID:	"P43.jpg"	,P_type:	"AI"	,P_sentence:	"The cowboy slap the soldier."	,verif_ans:	"y"	},
-{	T_verb:	"tickle"	,T_image_ID:	"P42.jpg"	,P_image_ID:	"P46.jpg"	,P_type:	"AI"	,P_sentence:	"The ballerina tickle the soldier."	,verif_ans:	"n"	}
+// 03/08 update stimuli input
+var BlockAC = [{ T_verb: "chase" ,T_image_ID:  "T01" ,P_image_ID:  "P01" ,P_type:  "AC"  ,P_sentence:  "The nun chases the sailor."  ,verif_ans: "y" },                            
+{ T_verb: "chase" ,T_image_ID:  "T02" ,P_image_ID:  "P03" ,P_type:  "AC"  ,P_sentence:  "The robber chases the waitress." ,verif_ans: "n" },                            
+{ T_verb: "follow"  ,T_image_ID:  "T05" ,P_image_ID:  "P09" ,P_type:  "AC"  ,P_sentence:  "The nun follows the doctor." ,verif_ans: "y" },                            
+{ T_verb: "follow"  ,T_image_ID:  "T06" ,P_image_ID:  "P11" ,P_type:  "AC"  ,P_sentence:  "The monk follows the nun." ,verif_ans: "n" },                            
+{ T_verb: "punch" ,T_image_ID:  "T09" ,P_image_ID:  "P17" ,P_type:  "AC"  ,P_sentence:  "The cowboy punches the swimmer." ,verif_ans: "y" },                            
+{ T_verb: "punch" ,T_image_ID:  "T10" ,P_image_ID:  "P19" ,P_type:  "AC"  ,P_sentence:  "The robber punches the cowboy."  ,verif_ans: "n" },                            
+{ T_verb: "scold" ,T_image_ID:  "T13" ,P_image_ID:  "P25" ,P_type:  "AC"  ,P_sentence:  "The policeman scolds the doctor."  ,verif_ans: "y" },                            
+{ T_verb: "scold" ,T_image_ID:  "T14" ,P_image_ID:  "P27" ,P_type:  "AC"  ,P_sentence:  "The boxer scolds the professor." ,verif_ans: "n" },                            
+{ T_verb: "kiss"  ,T_image_ID:  "T17" ,P_image_ID:  "P33" ,P_type:  "AC"  ,P_sentence:  "The artist kisses the ballerina."  ,verif_ans: "y" },                            
+{ T_verb: "kiss"  ,T_image_ID:  "T18" ,P_image_ID:  "P35" ,P_type:  "AC"  ,P_sentence:  "The clown kisses the nun." ,verif_ans: "n" },                            
+{ T_verb: "slap"  ,T_image_ID:  "T21" ,P_image_ID:  "P41" ,P_type:  "AC"  ,P_sentence:  "The cowboy slaps the professor." ,verif_ans: "y" },                            
+{ T_verb: "slap"  ,T_image_ID:  "T22" ,P_image_ID:  "P43" ,P_type:  "AC"  ,P_sentence:  "The soldier slaps the cowboy." ,verif_ans: "n" }
 ];
 
 var BlockPC = [
-{	T_verb:	"chase"	,T_image_ID:	"T02.jpg"	,P_image_ID:	"P03.jpg"	,P_type:	"PC"	,P_sentence:	"The robber is chased by the waitress."	,verif_ans:	"y"	},
-{	T_verb:	"follow"	,T_image_ID:	"T05.jpg"	,P_image_ID:	"P09.jpg"	,P_type:	"PC"	,P_sentence:	"The doctor is followed by the nun."	,verif_ans:	"y"	},
-{	T_verb:	"kick"	,T_image_ID:	"P04.jpg"	,P_image_ID:	"P08.jpg"	,P_type:	"PC"	,P_sentence:	"The policeman is kicked by the clown."	,verif_ans:	"n"	},
-{	T_verb:	"kiss"	,T_image_ID:	"T18.jpg"	,P_image_ID:	"P35.jpg"	,P_type:	"PC"	,P_sentence:	"The clown is kissed by the nun."	,verif_ans:	"y"	},
-{	T_verb:	"pull"	,T_image_ID:	"P36.jpg"	,P_image_ID:	"P40.jpg"	,P_type:	"PC"	,P_sentence:	"The pirate is pulled by the doctor."	,verif_ans:	"n"	},
-{	T_verb:	"punch"	,T_image_ID:	"T12.jpg"	,P_image_ID:	"P23.jpg"	,P_type:	"PC"	,P_sentence:	"The boxer is punched by the artist"	,verif_ans:	"y"	},
-{	T_verb:	"scold"	,T_image_ID:	"T15.jpg"	,P_image_ID:	"P29.jpg"	,P_type:	"PC"	,P_sentence:	"The doctor is scolded by the professor. "	,verif_ans:	"y"	},
-{	T_verb:	"slap"	,T_image_ID:	"T21.jpg"	,P_image_ID:	"P41.jpg"	,P_type:	"PC"	,P_sentence:	"The professor is slapped by the cowboy."	,verif_ans:	"y"	},
-{	T_verb:	"touch"	,T_image_ID:	"P20.jpg"	,P_image_ID:	"P24.jpg"	,P_type:	"PC"	,P_sentence:	"The waitress is touched by the doctor."	,verif_ans:	"n"	}
+{ T_verb: "chase" ,T_image_ID:  "T03" ,P_image_ID:  "P05" ,P_type:  "PC"  ,P_sentence:  "The monk is chased by the policeman."  ,verif_ans: "y" },                            
+{ T_verb: "chase" ,T_image_ID:  "T04" ,P_image_ID:  "P07" ,P_type:  "PC"  ,P_sentence:  "The pirate is chased by the swimmer."  ,verif_ans: "n" },                            
+{ T_verb: "follow"  ,T_image_ID:  "T07" ,P_image_ID:  "P13" ,P_type:  "PC"  ,P_sentence:  "The ballerina is followed by the pirate" ,verif_ans: "y" },                            
+{ T_verb: "follow"  ,T_image_ID:  "T08" ,P_image_ID:  "P15" ,P_type:  "PC"  ,P_sentence:  "The pirate is followed by the robber." ,verif_ans: "n" },                            
+{ T_verb: "punch" ,T_image_ID:  "T11" ,P_image_ID:  "P21" ,P_type:  "PC"  ,P_sentence:  "The ballerina is punched by the artist." ,verif_ans: "y" },                            
+{ T_verb: "punch" ,T_image_ID:  "T12" ,P_image_ID:  "P23" ,P_type:  "PC"  ,P_sentence:  "The artist is punched by the boxer." ,verif_ans: "n" },                            
+{ T_verb: "scold" ,T_image_ID:  "T15" ,P_image_ID:  "P29" ,P_type:  "PC"  ,P_sentence:  "The doctor is scolded by the professor. "  ,verif_ans: "y" },                            
+{ T_verb: "scold" ,T_image_ID:  "T16" ,P_image_ID:  "P31" ,P_type:  "PC"  ,P_sentence:  "The policeman is scolded by the monk. "  ,verif_ans: "n" },                            
+{ T_verb: "kiss"  ,T_image_ID:  "T19" ,P_image_ID:  "P37" ,P_type:  "PC"  ,P_sentence:  "The boxer is kissed by the artist."  ,verif_ans: "y" },                            
+{ T_verb: "kiss"  ,T_image_ID:  "T20" ,P_image_ID:  "P39" ,P_type:  "PC"  ,P_sentence:  "The nun is kissed by the monk."  ,verif_ans: "n" },                            
+{ T_verb: "slap"  ,T_image_ID:  "T23" ,P_image_ID:  "P45" ,P_type:  "PC"  ,P_sentence:  "The clown is slapped by  the policeman." ,verif_ans: "y" },                            
+{ T_verb: "slap"  ,T_image_ID:  "T24" ,P_image_ID:  "P47" ,P_type:  "PC"  ,P_sentence:  "The policeman is slapped by  the monk."  ,verif_ans: "n" }
+];
+
+var BlockAI = [
+{ T_verb: "tickle"  ,T_image_ID:  "P42" ,P_image_ID:  "P46" ,P_type:  "AI"  ,P_sentence:  "The soldier is tickls the ballerina."  ,verif_ans: "y" },                            
+{ T_verb: "kick"  ,T_image_ID:  "P02" ,P_image_ID:  "P06" ,P_type:  "AI"  ,P_sentence:  "The policeman is kickes the boxer."  ,verif_ans: "y" },                            
+{ T_verb: "push"  ,T_image_ID:  "P10" ,P_image_ID:  "P12" ,P_type:  "AI"  ,P_sentence:  "The chef is pushs the clown."  ,verif_ans: "y" },                            
+{ T_verb: "touch" ,T_image_ID:  "P18" ,P_image_ID:  "P22" ,P_type:  "AI"  ,P_sentence:  "The waitress is touchs the sailor."  ,verif_ans: "y" },                            
+{ T_verb: "shot"  ,T_image_ID:  "P26" ,P_image_ID:  "P28" ,P_type:  "AI"  ,P_sentence:  "The artist is shoots the robber. " ,verif_ans: "y" },                            
+{ T_verb: "pull"  ,T_image_ID:  "P34" ,P_image_ID:  "P38" ,P_type:  "AI"  ,P_sentence:  "The boxer is pulls the soldier." ,verif_ans: "y" }
 ];
 
 var BlockPI = [
-{	T_verb:	"chase"	,T_image_ID:	"T04.jpg"	,P_image_ID:	"P07.jpg"	,P_type:	"PI"	,P_sentence:	"The swimmer is chase by the pirate."	,verif_ans:	"y"	},
-{	T_verb:	"follow"	,T_image_ID:	"T07.jpg"	,P_image_ID:	"P13.jpg"	,P_type:	"PI"	,P_sentence:	"The ballerina is follow by the pirate."	,verif_ans:	"y"	},
-{	T_verb:	"kiss"	,T_image_ID:	"T20.jpg"	,P_image_ID:	"P39.jpg"	,P_type:	"PI"	,P_sentence:	"The monk is kiss by the nun."	,verif_ans:	"y"	},
-{	T_verb:	"punch"	,T_image_ID:	"T10.jpg"	,P_image_ID:	"P19.jpg"	,P_type:	"PI"	,P_sentence:	"The robber is punch by the cowboy."	,verif_ans:	"y"	},
-{	T_verb:	"push"	,T_image_ID:	"P14.jpg"	,P_image_ID:	"P16.jpg"	,P_type:	"PI"	,P_sentence:	"The chef is push by the monk. "	,verif_ans:	"n"	},
-{	T_verb:	"scold"	,T_image_ID:	"T13.jpg"	,P_image_ID:	"P25.jpg"	,P_type:	"PI"	,P_sentence:	"The doctor is scold by the policeman."	,verif_ans:	"y"	},
-{	T_verb:	"shot"	,T_image_ID:	"P30.jpg"	,P_image_ID:	"P32.jpg"	,P_type:	"PI"	,P_sentence:	"The artist is shoot by the ballerina."	,verif_ans:	"n"	},
-{	T_verb:	"slap"	,T_image_ID:	"T23.jpg"	,P_image_ID:	"P45.jpg"	,P_type:	"PI"	,P_sentence:	"The clown is slap by the policeman."	,verif_ans:	"y"	},
-{	T_verb:	"tickle"	,T_image_ID:	"P44.jpg"	,P_image_ID:	"P48.jpg"	,P_type:	"PI"	,P_sentence:	"The soldier is tickle by the robber."	,verif_ans:	"n"	}
+{ T_verb: "tickle"  ,T_image_ID:  "P44" ,P_image_ID:  "P48" ,P_type:  "PI"  ,P_sentence:  "The soldier is ticklen by the robber. "  ,verif_ans: "n" },                            
+{ T_verb: "kick"  ,T_image_ID:  "P04" ,P_image_ID:  "P08" ,P_type:  "PI"  ,P_sentence:  "The policeman is kicken by the clown. "  ,verif_ans: "n" },                            
+{ T_verb: "push"  ,T_image_ID:  "P14" ,P_image_ID:  "P16" ,P_type:  "PI"  ,P_sentence:  "The chef is pushen by the monk." ,verif_ans: "n" },                            
+{ T_verb: "touch" ,T_image_ID:  "P20" ,P_image_ID:  "P24" ,P_type:  "PI"  ,P_sentence:  "The waitress is touchen by the doctor."  ,verif_ans: "n" },                            
+{ T_verb: "shot"  ,T_image_ID:  "P30" ,P_image_ID:  "P32" ,P_type:  "PI"  ,P_sentence:  "The artist is shooted by the ballerina. "  ,verif_ans: "n" },                            
+{ T_verb: "pull"  ,T_image_ID:  "P36" ,P_image_ID:  "P40" ,P_type:  "PI"  ,P_sentence:  "The pirate is pullen by the doctor. "  ,verif_ans: "n" }
 ];
 
 function get_random_seconds(min, max) {
@@ -109,7 +107,8 @@ function get_random_seconds(min, max) {
   rand_sec = Math.random() * (max - min) + min;
   return rand_sec*1000;
 }
-var randomize = function() {
+// original randomize function 9 trials for each condition
+var randomize0 = function() {
   var num = 9;
   var rand_final_trials = [];
   var rand_csv = [];
@@ -137,6 +136,22 @@ var randomize = function() {
   SUBJ_RAND_ORDER = rand_csv; 
   return rand_final_trials;
 };
+// new randomize function AC/PC: 12+12; AI/PI:6+6
+var randomize = function(){
+  BlockA = BlockAC.concat(BlockAI)
+  BlockP = BlockPC.concat(BlockPI)
+  rand_BlockA = jsPsych.randomization.repeat(BlockA, 1)
+  rand_BlockP = jsPsych.randomization.repeat(BlockP, 1)
+
+  temp = [];
+  for (var i=0;i< rand_BlockA.length;i++){
+    temp.push(rand_BlockA[i])
+    temp.push(rand_BlockP[i])
+  };
+
+  FULL_STIM = temp;
+  // SUBJ_RAND_ORDER = rand_csv; 
+  return temp;
 
 randomize();
 console.log('udpate SUBJ_RAND_ORDER: ' + SUBJ_RAND_ORDER==null)
