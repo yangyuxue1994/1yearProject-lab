@@ -34,7 +34,7 @@ def main():
 
     # run post_processing
     v4.SUBJ_LIST = SUBJ_LIST
-    v4result = v.all_mean_activeratio_primetype()
+    v4result = v4.all_mean_activeratio_primetype()
 
 if __name__ == "__main__":
     main()
