@@ -3,15 +3,18 @@ import ast
 import os
 
 PATH="./"
-VER = 'v4'
+VER = 'v5'
 
 def change_rand_file_format(f):
 	df=pd.read_csv(f)
 	df=df.T
-	if (VER == 'v4'):
+	df=df.iloc[6:]
+	
+	if (VER == 'v5'):
 		df=df.iloc[:-6]
-	else:  
-		df=df.iloc[6:]
+	if (VER == 'v4'):
+		df=df.iloc[:-6] 
+
 	newdf = pd.DataFrame()
 	for index, row in df.iterrows():
 		strrow=row.loc[0]
