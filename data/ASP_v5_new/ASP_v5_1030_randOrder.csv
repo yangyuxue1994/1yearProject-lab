@@ -1,0 +1,37 @@
+,T_image_ID,P_image_ID,T_verb,P_type,verif_ans,P_sentence
+0,T02.jpg,P03.jpg,chase,AC,n,The robber chases the waitress.
+1,T19.jpg,P37.jpg,kiss,PC,y,The boxer is kissed by the artist.
+2,T22.jpg,P43.jpg,slap,AC,n,The soldier slaps the cowboy.
+3,P20.jpg,P24.jpg,touch,PI,n,The waitress is touchen by the doctor.
+4,P42.jpg,P46.jpg,tickle,AI,y,The soldier is tickls the ballerina.
+5,T23.jpg,P45.jpg,slap,PC,y,The clown is slapped by  the policeman.
+6,T21.jpg,P41.jpg,slap,AC,y,The cowboy slaps the professor.
+7,T08.jpg,P15.jpg,follow,PC,n,The pirate is followed by the robber.
+8,P02.jpg,P06.jpg,kick,AI,y,The policeman is kickes the boxer.
+9,P14.jpg,P16.jpg,push,PI,n,The chef is pushen by the monk.
+10,T13.jpg,P25.jpg,scold,AC,y,The policeman scolds the doctor.
+11,T16.jpg,P31.jpg,scold,PC,n,The policeman is scolded by the monk. 
+12,T09.jpg,P17.jpg,punch,AC,y,The cowboy punches the swimmer.
+13,T20.jpg,P39.jpg,kiss,PC,n,The nun is kissed by the monk.
+14,P26.jpg,P28.jpg,shot,AI,y,The artist is shoots the robber. 
+15,T12.jpg,P23.jpg,punch,PC,n,The artist is punched by the boxer.
+16,T01.jpg,P01.jpg,chase,AC,y,The nun chases the sailor.
+17,T15.jpg,P29.jpg,scold,PC,y,The doctor is scolded by the professor. 
+18,T10.jpg,P19.jpg,punch,AC,n,The robber punches the cowboy.
+19,T03.jpg,P05.jpg,chase,PC,y,The monk is chased by the policeman.
+20,T18.jpg,P35.jpg,kiss,AC,n,The clown kisses the nun.
+21,T11.jpg,P21.jpg,punch,PC,y,The ballerina is punched by the artist.
+22,P18.jpg,P22.jpg,touch,AI,y,The waitress is touchs the sailor.
+23,T07.jpg,P13.jpg,follow,PC,y,The ballerina is followed by the pirate
+24,P34.jpg,P38.jpg,pull,AI,y,The boxer is pulls the soldier.
+25,P04.jpg,P08.jpg,kick,PI,n,The policeman is kicken by the clown. 
+26,T05.jpg,P09.jpg,follow,AC,y,The nun follows the doctor.
+27,P44.jpg,P48.jpg,tickle,PI,n,The soldier is ticklen by the robber. 
+28,T06.jpg,P11.jpg,follow,AC,n,The monk follows the nun.
+29,P30.jpg,P32.jpg,shot,PI,n,The artist is shooted by the ballerina. 
+30,P10.jpg,P12.jpg,push,AI,y,The chef is pushs the clown.
+31,T24.jpg,P47.jpg,slap,PC,n,The policeman is slapped by  the monk.
+32,T14.jpg,P27.jpg,scold,AC,n,The boxer scolds the professor.
+33,P36.jpg,P40.jpg,pull,PI,n,The pirate is pullen by the doctor. 
+34,T17.jpg,P33.jpg,kiss,AC,y,The artist kisses the ballerina.
+35,T04.jpg,P07.jpg,chase,PC,n,The pirate is chased by the swimmer.

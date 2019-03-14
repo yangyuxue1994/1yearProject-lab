@@ -8,7 +8,7 @@ VER = 'v5'
 def change_rand_file_format(f):
 	df=pd.read_csv(f)
 	df=df.T
-	df=df.iloc[6:]
+	# df=df.iloc[6:]
 	
 	if (VER == 'v5'):
 		df=df.iloc[:-6]

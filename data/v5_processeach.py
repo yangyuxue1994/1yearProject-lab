@@ -5,6 +5,7 @@ import sys
 # import postagger
 import os
 import passive
+from fractions import Fraction
 
 ## GLOBAL PARAM
 PRE_DIR = './pre_processing_data/'
@@ -12,11 +13,25 @@ POST_DIR= './post_processing_data/'
 SUBJ_LIST = []
 VER = 'v5'
 ONLY_CORRECT = None
+FRACTION = False
 
 def load_prepropdata (subjNum):	
 	cols=['P_type', 'T_verb','P_sentence','resp_iscorrect', 'verif_rt', 'descr_rt', 'responses','verif_ans']
 	df = pd.read_csv(PRE_DIR+'ASP_'+ VER +'_'+str(subjNum)+'_prepro.csv', usecols=cols)
 	return df
+
+def get_fraction_df(dfnum, dfden):
+	numlist = dfnum.ix[:,0].values.tolist()
+	denlist = dfden.ix[:,0].values.tolist()
+	frac_list = []
+	for x, y in zip(numlist, denlist):
+		fra = -1
+		try: 
+			fra = Fraction(x,y)
+		except:
+			fra = 0
+		frac_list.append(fra)
+	return pd.DataFrame(frac_list, index=dfnum.index, columns=dfnum.columns)
 
 # this function return an overall numeric value of accuracy in verif task
 def get_subj_verif_accuracy(currdf):
@@ -24,8 +39,8 @@ def get_subj_verif_accuracy(currdf):
 
 #  this function return df of accuracy on 4 prime type 
 def get_subj_verif_accuracy_primetype(currdf):
-	df_totalcount = currdf.groupby('P_type').count()[['resp_iscorrect']]
-	df_correctcount = currdf.groupby('P_type').sum()[['resp_iscorrect']]
+	df_totalcount = currdf.groupby('P_type').count()[['resp_iscorrect']].astype('int64')
+	df_correctcount = currdf.groupby('P_type').sum()[['resp_iscorrect']].astype('int64')
 	df_accuracy = df_correctcount.div(df_totalcount, axis=1)
 	return df_accuracy
 
@@ -66,19 +81,15 @@ def clean_currdf(subjNum):
 
 # this function return df of active-tense proportion on 4 prime type
 def get_subj_activeratio_primetype(currdf):
-	df_totalcount = currdf.groupby('P_type').count()[['isactive']]
-	df_activecount = currdf.groupby('P_type').sum()[['isactive']]
-	df_active_ratio = df_activecount.div(df_totalcount, axis=1)
+	df_totalcount = currdf.groupby('P_type').count()[['isactive']].astype('int64')
+	df_activecount = currdf.groupby('P_type').sum()[['isactive']].astype('int64')
+	
+	df_active_ratio = pd.DataFrame()
+	if (FRACTION):
+		df_active_ratio = get_fraction_df(df_activecount, df_totalcount)
+	else:
+		df_active_ratio = df_activecount.div(df_totalcount, axis=1)
 	return df_active_ratio
-
-# # resp_allcorrect: True/Flase
-# def get_subj_correct_activeratio_primetype_allcorrect(currdf, resp_allcorrect):
-# 	# get only correct/incorrect trials and count active/passive
-# 	corrdf = currdf.loc[currdf['resp_iscorrect'] == resp_allcorrect]
-# 	df_totalcount = corrdf.groupby('P_type').count()[['isactive']]
-# 	df_activecount = corrdf.groupby('P_type').sum()[['isactive']]
-# 	df_active_ratio = df_activecount.div(df_totalcount, axis=1)
-# 	return df_active_ratio
 
 
 # semantically correct trials are verif_ans always y
@@ -96,7 +107,12 @@ def all_mean_verif_accuracy():
 def all_mean_verif_accuracy_primetype():
 	all_acc_primetype = [get_subj_verif_accuracy_primetype(clean_currdf(subjNum)) for subjNum in SUBJ_LIST]
 	dfconc = pd.concat(all_acc_primetype)
-	dfallmean = dfconc.groupby('P_type').mean()
+
+	dfallmean = pd.DataFrame()
+	if (FRACTION):
+		dfallmean = dfconc.groupby('P_type').sum()/len(all_acc_primetype)
+	else:
+		dfallmean = dfconc.groupby('P_type').mean()
 	return dfallmean
 
 def all_mean_verifRT_pimetype():
@@ -109,6 +125,11 @@ def all_mean_activeratio_primetype():
 	all_activeratio_primetype = [get_subj_activeratio_primetype(clean_currdf(subjNum)) for subjNum in SUBJ_LIST]
 	dfconc = pd.concat(all_activeratio_primetype)
 	dfallmean = dfconc.groupby('P_type').mean()
+	# dfallmean = pd.DataFrame()
+	# if (FRACTION):
+	# 	dfallmean = dfconc.groupby('P_type').sum()/len(all_activeratio_primetype)
+	# else:
+	# 	dfallmean = dfconc.groupby('P_type').mean()
 	return dfallmean
 
 # this function is similar to all_mean_activeratio_primetype() but only count based on 
@@ -118,7 +139,11 @@ def all_mean_activeratio_primetype_semantic(semantic_correct):
 	# only get thoes semantically correct trials
 	all_activeratio_primetype = [get_subj_activeratio_primetype_semcorrect(clean_currdf(subjNum), semantic_correct) for subjNum in SUBJ_LIST]
 	dfconc = pd.concat(all_activeratio_primetype)
-	dfallmean = dfconc.groupby('P_type').mean()
+	dfallmean = pd.DataFrame()
+	if (FRACTION):
+		dfallmean = dfconc.groupby('P_type').sum()/len(all_activeratio_primetype)
+	else:
+		dfallmean = dfconc.groupby('P_type').mean()
 	return dfallmean
 
 
@@ -134,7 +159,8 @@ def all_mean_activeratio_primetype_semantic(semantic_correct):
 # > v.VER = 'v4'
 # > v.ONLY_CORRECT = True/None
 # > v.SUBJ_LIST = []
-# > v.SUBJ_LIST = range(1000,1002)
+# > v.SUBJ_LIST = range(1028, 1042)
+# > v.SUBJ_LIST.extend(range(1044,1051))
 # > v4result = v.all_mean_activeratio_primetype()
 # [1002, 1003, 1004, 1005, 1006, 1007, 1008, 1009, 1010, 1011, 1013, 1014, 1015, 1016, 1017, 1018, 1019, 1020, 1021, 1023, 1024, 1025, 1026, 1027]
 
